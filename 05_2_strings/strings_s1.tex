@@ -1,0 +1,202 @@
+%standard 6.1
+
+
+%start_of_questions
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 1
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	\item 
+		Zyra the code mage has hidden a mysterious cipher in reversed messages. 
+		You must help Zyra uncover the secrets of the digital realm. 
+		Create a function called $reverse\_string$ that takes the variable $word$ 
+		(a string) and returns the word in reversed order. \\
+		For this problem, you must use iteration (a loop) not slicing.
+
+	\textbf{Examples:}
+		\begin{itemize}
+			\item reverse\_string(\csq{programming}) $\rightarrow$ \csq{gnimmargorp}
+			\item reverse\_string(\csq{python}) $\rightarrow$ \csq{nohtyp}
+			\item reverse\_string(\csq{hello}) $\rightarrow$ \csq{olleh}
+		\end{itemize}
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 2
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	\item 
+		The \textbf{normal human body temperature} is 98.6F in Fahrenheit and 37C in Celsuis. 
+		Create a function that determines if the \textit{temp} is considered a fever(anove normal 
+		body temperature) or not.
+		\textit{temp} will be measured in Fahrenheit and Celsuis.\\
+		Notice: The F or C will always be the last character in the string.
+
+	\textbf{Examples:}
+	\begin{itemize}
+		\item is\_fever(\csq{99F}) $\rightarrow$ True, 
+		\item is\_fever(\csq{37C}) $\rightarrow$ False, 
+		\item is\_fever(\csq{98F}) $\rightarrow$ False, 
+	\end{itemize}
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 3
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	\item 
+		%https://edabit.com/challenge/dBqLSk6qvudNdZrSx
+		The \textbf{boiling point} of water is 212F in Fahrenheit and 100C in Celsuis. 
+		Create a function that determines if the \textit{temp} is considered boiling or not.
+		\textit{temp} will be measured in Fahrenheit and Celsuis.\\
+		Notice: The F or C will always be the last character in the string.
+
+	\textbf{Examples:}
+	\begin{itemize}
+		\item is\_boiling(\csq{212F}) $\rightarrow$ True, 
+		\item is\_boiling(\csq{100C}) $\rightarrow$ True, 
+		\item is\_boiling(\csq{0F}) $\rightarrow$ False, 
+	\end{itemize}
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 4
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	\item 
+		%https://edabit.com/challenge/nfWirHJzNRBMAp9Df
+		The \textbf{hamming distance} is the number of characters that differ between two strings.\\
+		To illustrate, \\ \hspace*{1em}
+		\begin{tabular}{lll}
+			str1 = &\csq{abcbba}\\
+			str2 = &\csq{abcbda}
+		\end{tabular}\\
+		The hamming distance is 1 since the only difference is the $5^{th}$ character. \\ 
+		That is, \csq{b} in str1 vs. \csq{d} in str2.
+		
+		Your task: create a function named hamming distance that takes two strings as arguments, 
+		and returns the hamming distance between the two strings.
+
+	\textbf{Examples:}
+		\begin{itemize}
+			\item hamming\_distance(\csq{abcde}, \csq{bcdef}) $\rightarrow$ 5, 
+				since all 5 letters are different.
+			\item hamming\_distance(\csq{abcdef}, \csq{abcdef}) $\rightarrow$ 0, 
+				since all 6 letters are the same.
+			\item hamming\_distance(\csq{strong}, \csq{strung}) $\rightarrow$ 1,
+				since there is only 1 character that is different.
+		\end{itemize}
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 5
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	\item 
+		%https://edabit.com/challenge/vTGXrd5ntYRk3t6Ma
+		An \textbf{Isogram} is a word that has no duplicate letters. Create a function that 
+		takes a string and returns either True or False depending on whether or not it is 
+		an \csq{isogram}. You may assume words will only have lower case letters.
+		
+	\textbf{Examples:}
+		\begin{itemize}
+			\item is\_isogram(\csq{algorithm}) $\rightarrow$ True
+			\item is\_isogram(\csq{password}) $\rightarrow$ False (multiple of s)
+			\item is\_isogram(\csq{consecutive}) $\rightarrow$ False (multiple of c)
+			\item is\_isogram(\csq{python}) $\rightarrow$ True
+		\end{itemize}
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 6
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	\item 
+		%https://edabit.com/challenge/Mv5qSgZKTLrLt9zzW
+		A fruit juice company tags their fruit juices by concatenating the first 
+		\textbf{three letters} of the words in a flavor's name, with its capacity. 
+		Create a function that creates product IDs for different fruit juices.
+		Notice that the first input is a string and the second is an integer.
+		
+	\textbf{Examples:}
+		\begin{itemize}
+			\item get\_drink\_ID(\csq{apple}, 500) $\rightarrow$ \csq{app500}
+			\item get\_drink\_ID(\csq{pineapple}, 45) $\rightarrow$ \csq{pin45}
+			\item get\_drink\_ID(\csq{watermelon}, 750) $\rightarrow$ \csq{wat750}
+		\end{itemize}
+
+
+
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 7
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	\item 
+		Professor Dumbledore seeks to decipher powerful encoded spells in the Hogwarts Library, 
+		their secrets revealed by the first letter of each word. Create a function called 
+		$first\_letters$ that takes the variable $sentence$ (a string) and returns
+		a string made up of the first letters of each word in the sentence. 
+
+		\textbf{Examples:}
+		\begin{itemize}
+			\item first\_letters(\csq{wingardium leviosa makes objects float}) 
+				$\rightarrow$ \csq{wlmof}
+			\item first\_letters(\csq{expecto patronum repels dementors}) $\rightarrow$ \csq{eprd}
+			\item first\_letters(\csq{the magic is within you}) $\rightarrow$ \csq{tmiwy}
+		\end{itemize}
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 8
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	\item 
+		Severus Snape seeks to harness powerful spells in the Hogwarts Library, you must 
+		encode them by using the last letter of each word. Create a function called 
+		$last\_letters$ that takes the variable $sentence$ (a string) and returns
+		a string made up of the last letters of each word in the sentence. 
+
+		\textbf{Examples:}
+		\begin{itemize}
+			\item last\_letters(\csq{wingardium leviosa makes objects float}) 
+				$\rightarrow$ \csq{masst}
+			\item last\_letters(\csq{expecto patronum repels dementors}) $\rightarrow$ \csq{omss}
+			\item last\_letters(\csq{the magic is within you}) $\rightarrow$ \csq{ecsnu}
+		\end{itemize}
+
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 9
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	\item
+		Write a function called \textit{flip\_flop} that takes a string as an argument 
+		and returns  a new word made up of the second half of the word first combined 
+		with the first half of the word second.
+
+		\textbf{Examples:}
+		\begin{itemize}
+			\item \textit{flip\_flop}(\csq{abcd}) $\rightarrow$ \csq{cdab} 
+				(that is, \csq{cd} then \csq{ab} \dots even length)
+			\item \textit{flip\_flop}(\csq{grapes}) $\rightarrow$ \csq{pesgra} 
+				(that is, \csq{pes} then \csq{gra} \dots even length)
+			\item \textit{flip\_flop}(\csq{abcde})$\rightarrow$ \csq{decab}
+				(that is, \csq{de} then \csq{c} then \csq{ab} \dots odd length)
+			\item \textit{flip\_flop}(\csq{cranberries})$\rightarrow$ \csq{rriesecranb}
+				(that is, \csq{rries} then \csq{e} then \csq{cranb} \dots odd length)
+
+		\end{itemize}
+
+%end_of_questions
+%make sure to leave at least one blank line below
+

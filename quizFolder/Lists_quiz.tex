@@ -1,0 +1,248 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amsfonts} % For math fonts.
+\usepackage{amssymb} % For other math symbols not covered by amsmath.
+\usepackage[pdftex]{graphicx} % For pictures, use \includegraphics[scale=decimal]{pic.png}; must be a .png file type.
+\usepackage{multicol}
+\usepackage{textcomp}
+\usepackage[colorlinks = true, urlcolor = blue]{hyperref}
+\usepackage{enumitem}
+\usepackage{graphbox} 
+\usepackage{subfig}
+\usepackage{multicol}
+\usepackage{nopageno}
+\usepackage{bm}
+
+
+\usepackage{tikz}
+\usetikzlibrary{positioning, calc}
+\usetikzlibrary{shapes.geometric,angles,quotes}
+\usepackage{tikz-3dplot}
+
+
+%page formatting
+\usepackage{fullpage}
+\setlength{\parindent}{0pt}
+
+
+\newcommand{\tab}{\hspace*{0.25in}}
+\newcommand{\csq}[1]{\reflectbox{''}#1''}  %This produces CS style quotes.
+\newcommand{\csqt}[1]{\text{\reflectbox{''}#1''}}  %This produces CS style quotes as text.
+
+
+\usepackage{listings}
+\lstset
+{ %Formatting for code in appendix
+    language=Python,
+    basicstyle=\footnotesize,
+    numbers=left,
+    stepnumber=1,
+    showstringspaces=false,
+    tabsize=2,
+    breaklines=true,
+    breakatwhitespace=false,
+}
+
+
+\begin{document}
+
+
+
+%split_point
+
+%\end{document}
+Lone Star \hfill Lists quiz\\
+section 4\\
+\begin{enumerate}
+\item (7.1) 
+		Write a \textbf{function} that loops through and returns a list with every even number between two
+		integers (inclusive). The arguments to the function will be $smaller\_num$ and 
+		$larger\_num$.
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  output\_even(37, 1050) $\rightarrow$ [38, 40, 42, \dots 1048, 1050], 
+			\item  output\_even(1, 2000) $\rightarrow$ [2, 4, 6, \dots 1998, 2000], 
+			\item  output\_even(50, 199) $\rightarrow$ [50, 52, 54, \dots 196, 198]
+		\end{itemize}
+
+\item (7.2) 
+		Write a \textbf{function} that finds the largest even number in a list $numbers$. Return -1 if not found. 
+		You may \textbf{not} use the built-in functions \textit{max}(), \textit{min}(), \textit{sort}(), or \textit{sorted}().
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  largest\_even([3, 7, 2, 1, 7, 9, 10, 13]) $\rightarrow$ 10,
+			\item  largest\_even([1, 3, 5, 7]) $\rightarrow$ -1,
+			\item  largest\_even([0, 19, 18973623]) $\rightarrow$ 0
+		\end{itemize}
+
+\item (7.3)
+		To train for an upcoming marathon, Johnny goes on one long-distance run each Saturday. 
+		He wants to track how often the number of miles he runs exceeds the previous Saturday. 
+		This is called a progress day. Write a \textbf{function} that takes in a list of miles 
+		run every Saturday and returns Johnny's total number of progress days.
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  progress\_days([3, 4, 1, 2]) $\rightarrow$ 2, 
+				(Two progress days, day 2 since $(4>3)$ and day 4 since $(2>1)$)
+			\item  progress\_days([10, 11, 12, 9, 10]) $\rightarrow$ 3, 
+			\item  progress\_days([6, 5, 4, 3, 2, 9]) $\rightarrow$ 1, 
+			\item  progress\_days([9, 9]) $\rightarrow$ 0
+		\end{itemize}
+
+\end{enumerate}
+\pagebreak
+Dot Matrix \hfill Lists quiz\\
+section 5\\
+\begin{enumerate}
+\item (7.1) 
+		Write a \textbf{function} that loops through a word and returns a list with every 
+		other letter of the word starting with the \textbf{first} letter.
+		The function will take a single argument $word$ (a string representing the word to process).
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  skip\_letter(\csq{counterattack}) $\rightarrow$ 
+				[\csq{c},\csq{u},\csq{t},\csq{r},\csq{t},\csq{a},\csq{c}]
+			\item  skip\_letter(\csq{banana sunday}) $\rightarrow$
+				[\csq{b},\csq{n},\csq{n},\csq{s},\csq{n},\csq{a}]
+		\end{itemize}
+
+\item (7.2) 
+		%https://edabit.com/challenge/6Pf5GGG6HnzbB95gf
+		Write a \textbf{function} that returns a list with the factors of a given integer. The argument of the function
+		will be $num$ (integer to find factors for).
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  find\_factors(12) $\rightarrow$ [1, 2, 3, 4, 6, 12], 
+			\item  find\_factors(17) $\rightarrow$ [1, 17],
+			\item  find\_factors(36) $\rightarrow$ [1, 2, 3, 4, 6, 9, 12, 18, 36]
+		\end{itemize}
+
+
+
+\item (7.3) 
+		There's a great war between the even and odd numbers. Many numbers already lost 
+		their lives in this war and it's your task to end this. You have to determine 
+		which group sums larger: the evens or the odds. The larger group wins.
+
+		Write a \textbf{function} that takes a list of integers named \textit{numbers}, 
+		sums the even numbers and odd numbers separately, then returns which of the two
+		sums is larger.
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  war\_of\_numbers([2, 8, 7, 5]) $\rightarrow$ 
+				\csq{odds}, (since 2 + 8 = 10, 7 + 5 = 12, odds is larger) 
+			\item  war\_of\_numbers([12, 90, 75, 1, 1]) $\rightarrow$ \csq{evens}, 
+				(12 + 90 = 102, 75 + 1 + 1 = 77, evens is larger) 
+			\item  war\_of\_numbers([2, 10, 22, 243]) $\rightarrow$ \csq{odds}
+		\end{itemize}
+
+
+
+\end{enumerate}
+\pagebreak
+Dark Helmet \hfill Lists quiz\\
+section 4\\
+\begin{enumerate}
+\item (7.1) 
+		Write a \textbf{function} that loops through a word and returns a list with every 
+		other letter of the word starting with the \textbf{second} letter.
+		The function will take a single argument $word$ (a string representing the word to process).
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  skip\_letter(\csq{counterattack}) $\rightarrow$ 
+				[\csq{o},\csq{n},\csq{e},\csq{a},\csq{t},\csq{c}]
+			\item  skip\_letter(\csq{banana sunday}) $\rightarrow$
+				[\csq{a},\csq{a},\csq{a},\csq{s},\csq{n},\csq{a}]
+		\end{itemize}
+
+
+\item (7.2) 
+		Write a function named \textit{add\_lists} that takes two lists $lyst1$ and $lyst2$ and adds the 
+		first element in $lyst1$ with the first element in $lyst2$, the second element $lyst1$
+		with the second element $lyst2$, etc. Return a new list containing the corresponding 
+		sums of the list1 and list2.  You may assume both lists have the same length.
+		%Return True if all element combinations add up to the same number. Otherwise, return False.
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  add\_lists([1, 3, 3, 1], [4, 3, 6, 1]) $\rightarrow$ [5, 6, 8, 2] 
+				( since 1+4=5; 3+3=6; 3+6=9; 1+1=2)
+			\item  add\_lists([1, 8, 5, 0, -7], [0, -7, 4, 2, -6]) $\rightarrow$ [1, 1, 9, 2, -13]
+			\item  add\_lists([1, 2], [-1, 1]) $\rightarrow$ [0, 3]
+		\end{itemize}
+
+
+\item (7.3)
+		To train for an upcoming marathon, Samuel goes on one long-distance run each Saturday. 
+		He wants to track how often the number of miles he runs fall short of the previous Saturday. 
+		This is called a lag day. Write a \textbf{function} that takes in a list of miles 
+		run every Saturday and returns Samuel's total number of lag days.
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  lag\_days([5, 3, 2, 1]) $\rightarrow$ 3, 
+				(3 lag days, day2 since (3$<$5), day3 since (2$<$3), and day4 since (1$<$2))
+			\item  lag\_days([10, 11, 12, 9, 10]) $\rightarrow$ 1, 
+			\item  lag\_days([6, 5, 4, 3, 2, 9]) $\rightarrow$ 4, 
+			\item  lag\_days([9, 9]) $\rightarrow$ 0
+		\end{itemize}
+
+\end{enumerate}
+\pagebreak
+President Skroob \hfill Lists quiz\\
+section 1\\
+\begin{enumerate}
+\item (7.1) 
+		Write a \textbf{function} that loops through a word and returns a list with every 
+		other letter of the word starting with the \textbf{first} letter.
+		The function will take a single argument $word$ (a string representing the word to process).
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  skip\_letter(\csq{counterattack}) $\rightarrow$ 
+				[\csq{c},\csq{u},\csq{t},\csq{r},\csq{t},\csq{a},\csq{c}]
+			\item  skip\_letter(\csq{banana sunday}) $\rightarrow$
+				[\csq{b},\csq{n},\csq{n},\csq{s},\csq{n},\csq{a}]
+		\end{itemize}
+
+\item (7.2)
+		Write a \textbf{function} that takes 3 numbers as arguments, $num\_1$ (first number), 
+		$num\_2$ (second number), and $num\_3$ (third number). 
+		Return a list of the integers in ascending order. 
+		You may \textbf{not} use the built-in functions \textit{max}(), \textit{min}(), 
+		\textit{sort}(), or \textit{sorted}().
+		
+	\textbf{Examples:}
+	\begin{itemize}
+		\item  ascending\_order(2, 3, 1) $\rightarrow$ [1, 2, 3], 
+		\item  ascending\_order(10, 1, 25) $\rightarrow$ [1, 10, 25], 
+		\item  ascending\_order(2, 45, 4) $\rightarrow$ [2, 4, 45] 
+	\end{itemize}
+
+
+\item (7.3)
+		To train for an upcoming marathon, Samuel goes on one long-distance run each Saturday. 
+		He wants to track how often the number of miles he runs fall short of the previous Saturday. 
+		This is called a lag day. Write a \textbf{function} that takes in a list of miles 
+		run every Saturday and returns Samuel's total number of lag days.
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  lag\_days([5, 3, 2, 1]) $\rightarrow$ 3, 
+				(3 lag days, day2 since (3$<$5), day3 since (2$<$3), and day4 since (1$<$2))
+			\item  lag\_days([10, 11, 12, 9, 10]) $\rightarrow$ 1, 
+			\item  lag\_days([6, 5, 4, 3, 2, 9]) $\rightarrow$ 4, 
+			\item  lag\_days([9, 9]) $\rightarrow$ 0
+		\end{itemize}
+
+\end{enumerate}
+\pagebreak
+\end{document}

@@ -1,0 +1,213 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amsfonts} % For math fonts.
+\usepackage{amssymb} % For other math symbols not covered by amsmath.
+\usepackage[pdftex]{graphicx} % For pictures, use \includegraphics[scale=decimal]{pic.png}; must be a .png file type.
+\usepackage{multicol}
+\usepackage{textcomp}
+\usepackage[colorlinks = true, urlcolor = blue]{hyperref}
+\usepackage{enumitem}
+\usepackage{graphbox} 
+\usepackage{subfig}
+\usepackage{multicol}
+\usepackage{nopageno}
+\usepackage{bm}
+
+
+\usepackage{tikz}
+\usetikzlibrary{positioning, calc}
+\usetikzlibrary{shapes.geometric,angles,quotes}
+\usepackage{tikz-3dplot}
+
+
+%page formatting
+\usepackage{fullpage}
+\setlength{\parindent}{0pt}
+
+
+\newcommand{\tab}{\hspace*{0.25in}}
+\newcommand{\csq}[1]{\reflectbox{''}#1''}  %This produces CS style quotes.
+\newcommand{\csqt}[1]{\text{\reflectbox{''}#1''}}  %This produces CS style quotes as text.
+
+
+\usepackage{listings}
+\lstset
+{ %Formatting for code in appendix
+    language=Python,
+    basicstyle=\footnotesize,
+    numbers=left,
+    stepnumber=1,
+    showstringspaces=false,
+    tabsize=2,
+    breaklines=true,
+    breakatwhitespace=false,
+}
+
+
+\begin{document}
+
+
+
+%split_point
+
+%\end{document}
+Lone Star \hfill Advanced Functions quiz\\
+section 4\\
+\begin{enumerate}
+\item (9.1) 
+		(Game: Odd or Even)  Write a \textbf{function} that lets the user guess whether a randomly 
+		generated number is odd or even.  The function randomly generates an integer between 0 and 9 
+		(inclusive) and returns whether the user's guess is correct or incorrect. The argument for 
+		the function will be $guess$ (the user's guess, either \csq{odd} or \csq{even}), if no 
+		argument is provided then the \textbf{default} guess should be even.\\
+		Hint: Use the following lines of code to create the function.
+		\begin{verbatim}
+		    from random import randint
+		    value = randint(0,9) #picks a random integer between 0-9 inclusive
+		\end{verbatim}
+		\textbf{Examples:}
+		\begin{itemize}
+			\item  guess( ) $\rightarrow$ \csq{Correct!} (if random value is even) 
+				or \csq{Incorrect!} (if random value is odd) 
+			\item  guess(\csq{odd})$\rightarrow$\csq{Correct!} (if random value is odd) 
+				or \csq{Incorrect!} (if random value is even)
+			\item  guess(\csq{even}) $\rightarrow$ \csq{Correct!} (if random value is even) 
+				or \csq{Incorrect!} (if random value is odd) 
+		\end{itemize}
+
+\item (9.2) 
+		Write a \textbf{function} named \textit{is\_two\_digit\_number} that returns a boolean value 
+		which determines if an integer is a two digit number. Write a second function named 
+		\textit{report\_two\_digit\_numbers} that takes a list of integers and returns a new list 
+		containing all the two digit numbers from the original list. 
+		Call the \textit{is\_two\_digit\_number} function as part of the \textit{report\_two\_digit\_numbers} function. 
+
+		Hint: a two digit number is one in the range $[-99,-10]\cup[10,99]$.\\
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item report\_two\_digit\_numbers([100,57,12,1]) $\rightarrow$ [57,12]
+			\item report\_two\_digit\_numbers([121,36,-19,-6,0,21]) $\rightarrow$ [36,-19,21]
+			\item report\_two\_digit\_numbers([100,7,8437]) $\rightarrow$ []
+		\end{itemize}
+
+
+
+\end{enumerate}
+\pagebreak
+Dot Matrix \hfill Advanced Functions quiz\\
+section 5\\
+\begin{enumerate}
+\item (9.1)
+		Write a \textbf{function} that takes two arguments, a list and a value.  The function 
+		should return the indices of all occurrences of the $value$ in the list, 
+		if no argument is provided then the \textbf{default} should be to find 0.
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  get\_indices( [1, 0, 5, 0, 7] ) $\rightarrow$ [1, 3]
+			\item  get\_indices( [1, 5, 5, 2, 7], 7) $\rightarrow$ [4]
+			\item  get\_indices( [1, 5, 5, 2, 7] ) $\rightarrow$ [ ]
+			\item  get\_indices( [1, 5, 5, 2, 7], 5) $\rightarrow$ [1, 2]
+			\item  get\_indices( [1, 5, 5, 2, 7], 8) $\rightarrow$ [ ]
+			\item  get\_indices( [\csq{a}, \csq{a}, \csq{b}, \csq{a}, \csq{b}, \csq{a}], \csq{a}) 
+				$\rightarrow$ [0, 1, 3, 5]
+		\end{itemize}
+
+
+\item (9.2) 
+		Write a \textbf{function} named \textit{is\_vowel} that returns a boolean value which determines 
+		if an letter is a vowel.  Write a second function named \textit{report\_vowels} that takes a string 
+		and returns a list containing all the vowels from the original string.
+		Call the \textit{is\_vowel} function as part of the \textit{report\_vowels} function. 
+
+		Hint: In the English language, the letters a, e, i, o, and u are the vowels.\\
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item report\_vowels(\csq{apple}) $\rightarrow$ [a,e]
+			\item report\_vowels(\csq{banana}) $\rightarrow$ [a,a,a] 
+			\item report\_vowels(\csq{run time error}) $\rightarrow$ [r,i,e,e,o]
+		\end{itemize}
+
+	
+
+\end{enumerate}
+\pagebreak
+Dark Helmet \hfill Advanced Functions quiz\\
+section 4\\
+\begin{enumerate}
+\item (9.1) 
+		(Game: Odd or Even)  Write a \textbf{function} that lets the user guess whether a randomly 
+		generated number is odd or even.  The function randomly generates an integer between 0 and 9 
+		(inclusive) and returns whether the user's guess is correct or incorrect. The argument for 
+		the function will be $guess$ (the user's guess, either \csq{odd} or \csq{even}), if no 
+		argument is provided then the \textbf{default} guess should be even.\\
+		Hint: Use the following lines of code to create the function.
+		\begin{verbatim}
+		    from random import randint
+		    value = randint(0,9) #picks a random integer between 0-9 inclusive
+		\end{verbatim}
+		\textbf{Examples:}
+		\begin{itemize}
+			\item  guess( ) $\rightarrow$ \csq{Correct!} (if random value is even) 
+				or \csq{Incorrect!} (if random value is odd) 
+			\item  guess(\csq{odd})$\rightarrow$\csq{Correct!} (if random value is odd) 
+				or \csq{Incorrect!} (if random value is even)
+			\item  guess(\csq{even}) $\rightarrow$ \csq{Correct!} (if random value is even) 
+				or \csq{Incorrect!} (if random value is odd) 
+		\end{itemize}
+
+\item (9.2) 
+		Write a \textbf{function} named \textit{is\_even} that returns a boolean value which determines 
+		if an integer is even.  Write a second function named \textit{report\_evens} that takes a list 
+		of integers and returns a new list containing all the even numbers from the original list. 
+		Call the \textit{is\_even} function as part of the \textit{report\_evens} function. 
+		
+		\begin{itemize}
+			\item  report\_evens([4,3,12,16,8,9,25]) $\rightarrow$ [4,12,16,8]
+			\item  report\_evens([6,100,3,12,16,6,9,100]) $\rightarrow$ [6,100,12,16,6,100]
+			\item  report\_evens([3,99,7,13,25]) $\rightarrow$ []
+		\end{itemize}
+
+
+\end{enumerate}
+\pagebreak
+President Skroob \hfill Advanced Functions quiz\\
+section 1\\
+\begin{enumerate}
+\item (9.1) 
+		Write a \textbf{function} that returns the number of copies of the same number. 
+		The arguments for the function will be $num\_1$ (first number), $num\_2$ (second number), 
+		and $num\_3$ (third number), if no argument is provided then the \textbf{default} for all 
+		3 values should be 0.\\
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  count\_duplicates(2, 3, 2) $\rightarrow$ \csq{There are 2 of the same number}, 
+			\item  count\_duplicates(4, 4, 4) $\rightarrow$ \csq{There are 3 of the same number}, 
+			\item  count\_duplicates(1, 2, 3) $\rightarrow$ \csq{Each number is unique} 
+			\item  count\_duplicates(1) $\rightarrow$ \csq{There are 2 of the same number} 
+			\item  count\_duplicates(0) $\rightarrow$ \csq{There are 3 of the same number} 
+		\end{itemize}
+
+
+\item (9.2) 
+		Write a \textbf{function} named \textit{is\_two\_digit\_number} that returns a boolean value 
+		which determines if an integer is a two digit number. Write a second function named 
+		\textit{report\_two\_digit\_numbers} that takes a list of integers and returns a new list 
+		containing all the two digit numbers from the original list. 
+		Call the \textit{is\_two\_digit\_number} function as part of the \textit{report\_two\_digit\_numbers} function. 
+
+		Hint: a two digit number is one in the range $[-99,-10]\cup[10,99]$.\\
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item report\_two\_digit\_numbers([100,57,12,1]) $\rightarrow$ [57,12]
+			\item report\_two\_digit\_numbers([121,36,-19,-6,0,21]) $\rightarrow$ [36,-19,21]
+			\item report\_two\_digit\_numbers([100,7,8437]) $\rightarrow$ []
+		\end{itemize}
+
+
+
+\end{enumerate}
+\pagebreak
+\end{document}

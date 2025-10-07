@@ -1,0 +1,170 @@
+%standard 13.1
+
+
+%start_of_questions
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 1
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	\item
+		Write a class for a \textbf{Vector} with the instance variables and methods listed below.\\
+		A vector in the $xy$-plane is a quantity that has both direction and magnitude.\\ It can 
+		be written in the form $v = ax + by$, where $a$ and $b$ are real numbers.\\[0.5em]
+		Some examples of vectors include:
+		
+		\begin{minipage}[t]{0.65\textwidth}
+			\begin{itemize}
+				\item $v_1 = 3x + 2y$
+				\item $v_2 = -2x + 6y$
+				\item $v_3 = 2x$ (which is the same as $2x + 0y$)
+			\end{itemize}
+
+			Your class should support:
+			\begin{itemize}
+				\item Creating a vector with $x$ and $y$ components
+				\item Comparing if two vectors are equal using the \_\_eq\_\_ method
+				\item Printing a readable version of the vector
+			\end{itemize}
+		\end{minipage}
+		\hfill
+		\begin{minipage}[t]{0.32\textwidth}
+			\vspace{-1.2em} % Adjust this value to align vertically with the sentence above
+			\begin{flushright}
+				\begin{tabular}{|l|}
+					\hline
+					Vector \\ \hline
+					a (x-component) \\
+					b (y-component) \\ \hline
+					\_\_init\_\_ \\
+					%\_\_add\_\_ \\
+					\_\_eq\_\_ \\
+					\_\_str\_\_ \\ \hline
+				\end{tabular}
+			\end{flushright}
+		\end{minipage}
+		
+		Hint: Two vectors are equal if their components are equal. That is, the x-components 
+		of both are equal and the y-components of both are equal.\\
+		For example, $v_1 =(2x + 3y)$ and $v_2=(2x + 3y)$ are equal, \\
+		but $v_1=(2x + 3y)$ and $v_2=(4x + 5y)$ are not.\\[0.5em]
+		After writing the class, initialize three vectors and write code to add them together.
+
+		%Hint: Vectors are added component-wise.\\
+		%For example, $(2x + 3y) + (4x + 5y) = 6x + 8y$.\\[0.5em]
+		%After writing the class, initialize three vectors and write code to add them together.
+
+
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 2
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	\item
+		Write a class for a \textbf{Point} with the instance variables and methods listed below.\\
+		A point in the coordinate plane has an $x$ and $y$ coordinate. Points can be compared, 
+		and the distance between two points can be calculated using the distance formula.
+			
+		\begin{minipage}[t]{0.65\textwidth}
+			For example:
+			\begin{itemize}
+				\item $p_1 = (3, 4)$
+				\item $p_2 = (0, 0)$
+				\item Distance between $p_1$ and $p_2$ is $\sqrt{(3 - 0)^2 + (4 - 0)^2} = 5$
+				%\item $p_1 + p_2 = (3 + 0,\ 4 + 0) = (3,\ 4)$
+				\item $(3,4)$ is equal to $(3,4)$, but $(1,2)$ is not equal to $(6,6)$.
+			\end{itemize}
+		\end{minipage}
+		\hfill
+		\begin{minipage}[t]{0.32\textwidth}
+			\vspace{.2em}
+			\begin{flushright}
+				\begin{tabular}{|l|}
+					\hline
+					Point \\ \hline
+					x (x-coordinate) \\
+					y (y-coordinate) \\ \hline
+					\_\_init\_\_ \\
+					\_\_eq\_\_ \\
+					distance(other) \\
+					\_\_str\_\_ \\ \hline
+				\end{tabular}
+			\end{flushright}
+		\end{minipage}
+		
+		Your class should support:
+		\begin{itemize}
+			\item Creating a point with $x$ and $y$ coordinates
+			%\item Adding two points using the \_\_add\_\_ method
+			\item Determine if two points are equal using the \_\_eq\_\_  method	
+			\item Calculating the distance to another point using \texttt{distance(other)}
+			\item Printing a readable version of the point
+		\end{itemize}
+		
+		Once you have created the class, add code that:
+		\begin{itemize}
+			\item Instantiate two Points
+			\item Compare if they are equal
+			\item Print a readable version of one of the Points you created.
+			%\item Handles invalid input (e.g., wrong types or missing values)
+		\end{itemize}
+
+
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 7
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	\item
+		Write a class for a \textbf{ComplexNumber} with the instance variables and methods listed 
+		below.\\
+		A ComplexNumber is a number of the form $a + bi$, where $a$ is the real part, $b$ is 
+		the imaginary part, and both $a$ and $b$ are real numbers. 
+			
+		\begin{minipage}[t]{0.7\textwidth}
+			Some examples of a ComplexNumber include:
+			\begin{itemize}
+				\item $z_1 = 3 + 2i$
+				\item $z_2 = -1 + 4i$
+				\item $z_3 = 2$ (which is the same as $2 + 0i$)
+			\end{itemize}
+		\end{minipage}
+		\hfill
+		\begin{minipage}[t]{0.25\textwidth}
+			\vspace{.2em}
+			\begin{flushright}
+				\begin{tabular}{|l|}
+					\hline
+					ComplexNumber \\ \hline
+					a (real part) \\
+					b (imaginary part) \\ \hline
+					\_\_init\_\_ \\
+					\_\_eq\_\_ \\
+					\_\_str\_\_ \\ \hline
+				\end{tabular}
+			\end{flushright}
+		\end{minipage}
+		
+		Once you have created the class, add code that:
+		\begin{itemize}
+			\item Instantiates two ComplexNumbers with a real and imaginary parts
+			%\item Adds two ComplexNumbers using the \_\_add\_\_ method
+			\item Compares if two ComplexNumbers are equal using the \_\_eq\_\_  method		
+			\item Printing a readable version (e.g., \csq{3 + 2$i$} or \csq{5 - 1$i$})
+		\end{itemize}
+		
+		%Hint: ComplexNumbers are added component-wise.\\
+		%For example, $(2 + 3i) + (4 + 5i) = 6 + 8i$.\\
+		
+		After writing the class, initialize two ComplexNumbers and write code to determine if
+		they are equal.
+
+%end_of_questions
+%make sure to leave at least one blank line below
+
+

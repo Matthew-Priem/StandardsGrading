@@ -1,0 +1,68 @@
+%standard 2.2
+
+%start_of_questions
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 3
+	% Difficulty: 2
+%%%%%%%%%%%%%%%%%%%%%
+	\item 
+		Write a program that calculates then outputs the area of a trapezoid.  
+		The user should be able to pick both bases and the height (that is: $a$, $b$, and $h$).\\
+		Hint: $A = \dfrac{a+b}{2}h$
+		
+		\vspace*{-3em}
+		\begin{flushright}
+		\begin{tikzpicture}
+			\node (a) [trapezium, trapezium angle=60, minimum width=50mm, draw, thick, label=above:$a$,
+				label=below:$b$] {};
+			\draw [densely dashed] (a.north west) coordinate (a nw) -- (a nw |- a.south) node 
+				[midway,right] {$h$};
+			\draw (a nw |- a.south) ++(0,1.5mm) -| ++(-1.5mm,-1.5mm);
+			\coordinate (a blc) at (a.bottom left corner);
+			\coordinate (a brc) at (a.bottom right corner);
+		\end{tikzpicture}
+		\end{flushright}
+
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 4
+	% Difficulty: 2
+%%%%%%%%%%%%%%%%%%%%%
+	\item 
+		Write a program that calculates then outputs the volume of a right square pyramid.  
+		The user should be able to pick $b$ (the base edge) and $h$ (the height).\\
+		%Make sure to use the value of pi from the math module.\\
+		Hint: $V = \dfrac{b^2 h}{3}$
+		
+		\vspace*{-4em}
+		\begin{flushright}
+		\tdplotsetmaincoords{70}{-20}
+		\begin{tikzpicture}[tdplot_main_coords,line cap=butt,line join=bevel]
+			\pgfmathsetmacro{\B}{4}
+			\pgfmathsetmacro{\H}{4}
+			\draw[thick] (-\B/2,-\B/2,0) -- (\B/2,-\B/2,0) -- (\B/2,\B/2,0) -- (-\B/2,\B/2,0)
+				 -- cycle;
+			\draw[thick] (\B/2,\B/2,0) -- (0,0,\H)
+			node[above,font=\large\bfseries]{};
+			\draw[dashed] (0,0,0) -- (0,0,\H) coordinate[midway](aux1);
+			\draw[] (0,0,0.3) -- (0.3,0,0.3) -- (0.3,0,0);
+			%\draw[dashed,blue] (-\B/2,0,0) -- (0,0,\H) coordinate[pos=0.3](aux2);
+			%\draw[blue] ({-\B/2+0.15*(\H/\B)},0,0.3) -- ({-\B/2+0.15*(\H/\B)},-0.3,0.3) 
+				%-- (-\B/2,-0.3,0);
+			\coordinate (aux3) at (0.3,-2,0);
+			\draw[thick] (-\B/2,-\B/2,0) -- (0,0,\H) -- (\B/2,-\B/2,0) -- cycle;
+			\draw[thick] (-\B/2,-\B/2,0) -- (0,0,\H) -- (-\B/2,\B/2,0) -- cycle;
+			\begin{scope}[tdplot_screen_coords]
+				\draw (aux1) -- ++ (2,0.1) node[right,font=\itshape] {Height: h};
+				%\draw (aux2) -- ++ (-1.5,0.3) node[left,font=\itshape] {Slant Height};
+				\draw (aux3) -- ++ (2,-0.2) node[below right,font=\itshape] {Base edge: b};
+			\end{scope}
+		\end{tikzpicture}
+		\end{flushright}
+
+%end_of_questions

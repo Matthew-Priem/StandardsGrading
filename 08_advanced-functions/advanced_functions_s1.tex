@@ -1,0 +1,269 @@
+%standard 9.1
+%week 8
+
+
+%start_of_questions
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 1
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	\item 
+		(Game: heads or tails)  Write a \textbf{function} that lets the user guess whether the flip of a coin 
+		results in heads or tails. The function randomly generates an integer 0 or 1, which 
+		represents head or tail. The function returns if the guess is correct or incorrect. The argument for the function will be $guess$ 
+		(the guess of the user, 0 for heads and 1 for tails), if no argument is provided then the \textbf{default} should be 0 for heads.\\
+		Hint: Use the following lines of code to create the function.
+		\begin{verbatim}
+		    from random import randint
+		    value = randint(0,1) #picks a random integer. Either 0 or 1.
+		\end{verbatim}
+		\textbf{Examples:}
+		\begin{itemize}
+			\item  toss\_coin( ) $\rightarrow$ \csq{Correct!} (if the random value is 0) or 
+				\csq{Incorrect!} (if the random value is 1), 
+			\item  toss\_coin(0) $\rightarrow$ \csq{Correct!} (if the random value is 0) or 
+				\csq{Incorrect!} (if the random value is 1), 
+			\item  toss\_coin(1) $\rightarrow$ \csq{Correct!} (if the random value is 1) or 
+				\csq{Incorrect!} (if the random value is 0) 
+		\end{itemize}
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 2
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	\item 
+		(Game: Odd or Even)  Write a \textbf{function} that lets the user guess whether a randomly 
+		generated number is odd or even.  The function randomly generates an integer between 0 and 9 
+		(inclusive) and returns whether the user's guess is correct or incorrect. The argument for 
+		the function will be $guess$ (the user's guess, either \csq{odd} or \csq{even}), if no 
+		argument is provided then the \textbf{default} guess should be even.\\
+		Hint: Use the following lines of code to create the function.
+		\begin{verbatim}
+		    from random import randint
+		    value = randint(0,9) #picks a random integer between 0-9 inclusive
+		\end{verbatim}
+		\textbf{Examples:}
+		\begin{itemize}
+			\item  guess( ) $\rightarrow$ \csq{Correct!} (if random value is even) 
+				or \csq{Incorrect!} (if random value is odd) 
+			\item  guess(\csq{odd})$\rightarrow$\csq{Correct!} (if random value is odd) 
+				or \csq{Incorrect!} (if random value is even)
+			\item  guess(\csq{even}) $\rightarrow$ \csq{Correct!} (if random value is even) 
+				or \csq{Incorrect!} (if random value is odd) 
+		\end{itemize}
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 3
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	\item 
+		Write a \textbf{function} that returns the number of copies of the same number. 
+		The arguments for the function will be $num\_1$ (first number), $num\_2$ (second number), 
+		and $num\_3$ (third number), if no argument is provided then the \textbf{default} for all 
+		3 values should be 0.\\
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  count\_duplicates(2, 3, 2) $\rightarrow$ \csq{There are 2 of the same number}, 
+			\item  count\_duplicates(4, 4, 4) $\rightarrow$ \csq{There are 3 of the same number}, 
+			\item  count\_duplicates(1, 2, 3) $\rightarrow$ \csq{Each number is unique} 
+			\item  count\_duplicates(1) $\rightarrow$ \csq{There are 2 of the same number} 
+			\item  count\_duplicates(0) $\rightarrow$ \csq{There are 3 of the same number} 
+		\end{itemize}
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 4
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	\item 
+		Write a \textbf{function} to create a game of Rock, Paper, Scissors. The function will 
+		return the winner of the game played by two players.
+		The arguments to the function will be $player1$ (the first player's choice) and $player2$ 
+		(the second player's choice), if no argument is provided then the \textbf{default} for 
+		either player should be Rock.\\
+		Print the winner according to the following rules. 
+		\begin{itemize}
+			\item Rock beats Scissors
+			\item Scissors beats Paper
+			\item Paper beats Rock
+		\end{itemize}		
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  find\_winner(\csq{Rock}, \csq{Paper}) $\rightarrow$ \csq{Player 2 wins!}, 
+			\item  find\_winner(\csq{Scissors}, \csq{Paper}) $\rightarrow$ \csq{Player 1 wins!}, 
+			\item  find\_winner(\csq{Rock}, \csq{Rock}) $\rightarrow$ \csq{It's a tie!}
+			\item  find\_winner(\csq{Rock}) $\rightarrow$ \csq{It's a tie!}
+			\item  find\_winner( ) $\rightarrow$ \csq{It's a tie!}
+			\item  find\_winner(\csq{Scissors}) $\rightarrow$ \csq{Player 2 wins!}
+		\end{itemize}
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 5
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	\item 
+		Luke Skywalker has friends and family, but he is getting older and having trouble 
+		remembering them all.  Write a \textbf{function} that will return the relation 
+		defined in the table below. The arguments to the function will be $name$ 
+		(name of the person related to Luke), if no argument is provided then the 
+		\textbf{default} should be nothing. That is, the empty word \csq{ }. \\ 
+		\begin{center}
+		\begin{tabular}{|l|l|} \hline
+			Person 		& Relation \\ \hline \hline
+			Darth Vader	& Father \\ \hline
+			Leia		& Sister \\ \hline
+			Han			& Brother in law\\ \hline
+			R2D2		& Droid \\ \hline
+		\end{tabular}\\ \hspace*{1in} *If he types any other name, return \csq{unknown}.
+		\end{center}
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  find\_relation(\csq{Darth Vader}) $\rightarrow$ \csq{Father}, 
+			\item  find\_relation(\csq{R2D2}) $\rightarrow$ \csq{Droid}, 
+			\item  find\_relation(\csq{Jabba the Hutt}) $\rightarrow$ \csq{Unknown}
+			\item  find\_relation( ) $\rightarrow$ \csq{Unknown}
+		\end{itemize}
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 6
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	\item 
+		Given a positive integer $n$, the following rules will always create a sequence that 
+		ends with 1, called Hailstone Sequence:
+		\begin{enumerate}
+			\item If $n$ is even, divide by 2
+			\item If $n$ is odd, multiply by 3 and add 1 (i.e. $3n+1$)
+			\item Continue until $n$ is 1
+		\end{enumerate}
+		Write a \textbf{function} that prints the hailstone sequence starting at $n$. 
+		The argument to the function will be $n$ (the integer to start the sequence from), 
+		if no argument is provided then the \textbf{default} should be 40.
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  hailstone\_seq(25) $\rightarrow$ 25, 76, 38, 19, 58 ... 8, 4, 2, 1, 
+			\item  hailstone\_seq(40) $\rightarrow$ 40, 20, 10, 5, 16, 8, 4, 2, 1
+			\item  hailstone\_seq( ) $\rightarrow$ 40, 20, 10, 5, 16, 8, 4, 2, 1
+		\end{itemize}
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 7
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	\item
+		Write a \textbf{function} that takes 3 numbers as arguments, $num\_1$ (first number), 
+		$num\_2$ (second number), and $num\_3$ (third number).  $num\_1$ should be mandatory.
+		If no arguments are provided for $num\_2$ or $num\_3$ then use 5 for $num\_2$ and 
+		25 for $num\_3$.
+		Return a list of the integers in ascending order. \\
+		You may \textbf{not} use the built-in functions \textit{max}(), \textit{min}(), 
+		\textit{sort}(), or \textit{sorted}().
+		
+	\textbf{Examples:}
+	\begin{itemize}
+		\item  ascending\_order(2, 3, 1) $\rightarrow$ [1, 2, 3], 
+		\item  ascending\_order(10, 1) $\rightarrow$ [1, 10, 25], 
+		\item  ascending\_order(50) $\rightarrow$ [5, 25, 50] 
+	\end{itemize}
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 8
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	\item
+		Write a \textbf{function} that takes 3 numbers as arguments, $num\_1$ (first number), 
+		$num\_2$ (second number), and $num\_3$ (third number).  $num\_1$ should be mandatory.
+		If no arguments are provided for $num\_2$ or $num\_3$ then use 15 for $num\_2$ and 
+		5 for $num\_3$.
+		Return a list of the integers in descending order. 
+		You may \textbf{not} use the built-in functions \textit{max}(), \textit{min}(), 
+		\textit{sort}(), or \textit{sorted}().
+		
+	\textbf{Examples:}
+	\begin{itemize}
+		\item  descending\_order(2, 3, 1) $\rightarrow$ [3, 2, 1], 
+		\item  descending\_order(10) $\rightarrow$ [15, 10, 5], 
+		\item  descending\_order(2, 45) $\rightarrow$ [45, 5, 2] 
+	\end{itemize}
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 9
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	\item
+		Write a \textbf{function} that takes two arguments, a list and a value.  The function 
+		should return the indices of all occurrences of the $value$ in the list, 
+		if no argument is provided then the \textbf{default} should be to find 0.
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  get\_indices( [1, 0, 5, 0, 7] ) $\rightarrow$ [1, 3]
+			\item  get\_indices( [1, 5, 5, 2, 7], 7) $\rightarrow$ [4]
+			\item  get\_indices( [1, 5, 5, 2, 7] ) $\rightarrow$ [ ]
+			\item  get\_indices( [1, 5, 5, 2, 7], 5) $\rightarrow$ [1, 2]
+			\item  get\_indices( [1, 5, 5, 2, 7], 8) $\rightarrow$ [ ]
+			\item  get\_indices( [\csq{a}, \csq{a}, \csq{b}, \csq{a}, \csq{b}, \csq{a}], \csq{a}) 
+				$\rightarrow$ [0, 1, 3, 5]
+		\end{itemize}
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 10
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	\item 
+		Write a \textbf{function} that returns the factors of a given integer. 
+		The argument of the function will be $num$ (integer to find factors for), 
+		if no argument is provided then the \textbf{default} should be 36.
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  find\_factors(12) $\rightarrow$ 1, 2, 3, 4, 6, 12, 
+			\item  find\_factors(17) $\rightarrow$ 1, 17,
+			\item  find\_factors(36) $\rightarrow$ 1, 2, 3, 4, 6, 9, 12, 18, 36
+			\item  find\_factors( ) $\rightarrow$ 1, 2, 3, 4, 6, 9, 12, 18, 36
+		\end{itemize}
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 11
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	\item
+		Write a \textbf{function} that takes two numbers as arguments $num$ and $length$ and 
+		returns a list of multiples of $num$ until the list length reaches $length$, if no 
+		argument is provided then the \textbf{default} for the list length should be 5.
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  list\_of\_multiples(7, 5) $\rightarrow$ [7, 14, 21, 28, 35]
+			\item  list\_of\_multiples(12, 10) $\rightarrow$ [12, 24, 36, 48, 60, 72, 84, 96, 108, 120]
+			\item  list\_of\_multiples(2) $\rightarrow$ [2, 4, 6, 8, 10]
+			\item  list\_of\_multiples(2,3) $\rightarrow$ [2, 4, 6]
+		\end{itemize}
+
+
+
+
+%end_of_questions
+%make sure to leave at least one blank line below
+

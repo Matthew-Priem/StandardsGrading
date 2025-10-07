@@ -1,0 +1,119 @@
+%standard 13.3
+
+
+
+%start_of_questions
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 8
+	% Difficulty: 3
+%%%%%%%%%%%%%%%%%%%%%
+	\item % give playlist default name.
+		Write a class for a \textbf{Playlist} with the instance variables and methods listed 
+		below.\\
+		A Playlist should have a default name of \csq{New Playlist}.\\
+		It can be instantiated with initial songs, but it is not required to.\\
+		Create a method called \textit{add\_song} which adds a song title (a string) to the 
+		Playlist.\\
+		You should be able to combine two Playlists, and print them in a readable way.
+			
+		\begin{minipage}[t]{0.65\textwidth}
+			For example:
+			\begin{itemize}
+				\item $p_1 = [\csqt{Song A}, \csqt{Song B}]$
+				\item $p_2 = [\csqt{Song C}]$
+				\item $p_1 + p_2 = [\csqt{Song A}, \csqt{Song B}, \csqt{Song C}]$
+			\end{itemize}
+
+			Your class should support:
+			\begin{itemize}
+				\item Creating a playlist with a name and list of songs
+				\item Adding two playlists (combines song lists)
+				\item Printing the playlist in a readable way (e.g., list songs)
+			\end{itemize}	
+		\end{minipage}
+		\hfill
+		\begin{minipage}[t]{0.32\textwidth}
+			\vspace{.2em}
+			\begin{flushright}
+				\begin{tabular}{|l|}
+					\hline
+					Playlist \\ \hline
+					name \\
+					songs (list of strings) \\ \hline
+					\_\_init\_\_ \\
+					add\_song \\
+					\_\_add\_\_ \\
+					\_\_str\_\_ \\ \hline
+				\end{tabular}
+			\end{flushright}
+		\end{minipage}
+		
+		Once you have created the class, add code that:
+		\begin{itemize}
+			\item Creates two playlists and at least one song to each.
+			\item Combines the playlists
+			\item Prints the result
+		\end{itemize}
+
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 9
+	% Difficulty: 3
+%%%%%%%%%%%%%%%%%%%%%
+	\item
+		Write a class for a \textbf{ShoppingCart} with the instance variables and methods listed 
+		below.\\
+		It can be instantiated with initial items in the cart, but it is not required to.\\
+		Create a method called \textit{add\_items} which adds an item (a string) to the 
+		ShoppingCart. The same item can be added more than once. If the item is already in the 
+		ShoppingCart, increase its quantity by one. If its not in the ShoppingCart, set the 
+		quantity to 1.\\ Hint: think about what type of data structure you should use. \\
+		When two ShoppingCarts are added together, the result should be a ShoppingCart 
+		containing the items in both. Overlapping items should have a sum of their quantities.
+
+		\begin{minipage}[t]{0.65\textwidth}
+			For example:
+			\begin{itemize}
+				\item $p_1 = \{\csqt{tea}:1, \csqt{energy drink}:2 \}$
+				\item $p_2 = \{\csqt{energy drink}:3, \csqt{hat}:1 \}$
+				\item $p_1 + p_2 = \{\csqt{tea}:1, \csqt{energy drink}:5, \csqt{hat}:1 \}$
+			\end{itemize}		
+		\end{minipage}
+		\hfill
+		\begin{minipage}[t]{0.32\textwidth}
+			\vspace{0.1em}
+			\begin{flushright}
+				\begin{tabular}{|l|} \hline
+					ShoppingCart \\ \hline
+					items (dict$\rightarrow$str:int) \\ \hline
+					\_\_init\_\_ \\
+					add\_item \\
+					\_\_add\_\_ \\
+					\_\_str\_\_ \\ \hline
+				\end{tabular}
+			\end{flushright}
+		\end{minipage}
+		
+		Your class should support:
+		\begin{itemize}
+			\item Creating a ShoppingCart
+			\item Adding two ShoppingCarts (combines items)
+			\item Printing the ShoppingCart in a readable way 
+				(e.g., lists all items with quantities)
+		\end{itemize}
+		
+		Once you have created the class, add code that:
+		\begin{itemize}
+			\item Creates two ShoppingCarts and at least one item to each.
+			\item Combines the ShoppingCarts
+			\item Prints the result
+		\end{itemize}
+
+%end_of_questions
+%make sure to leave at least one blank line below
+

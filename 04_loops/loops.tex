@@ -1,0 +1,117 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amsfonts} % For math fonts.
+\usepackage{amssymb} % For other math symbols not covered by amsmath.
+\usepackage[pdftex]{graphicx} % For pictures, use \includegraphics[scale=decimal]{pic.png}; must be a .png file type.
+\usepackage{multicol}
+\usepackage{textcomp}
+\usepackage[colorlinks = true, urlcolor = blue]{hyperref}
+\usepackage{enumitem}
+\usepackage{graphbox} 
+\usepackage{subfig}
+\usepackage{multicol}
+
+\newcommand{\tab}{\hspace*{0.25in}}
+
+\usepackage{tikz}
+\usetikzlibrary{positioning, calc}
+\usetikzlibrary{shapes.geometric,angles,quotes}
+
+
+\usepackage{fullpage}
+\usepackage{listings}
+\lstset
+{ %Formatting for code in appendix
+    language=Python,
+    basicstyle=\footnotesize,
+    numbers=left,
+    stepnumber=1,
+    showstringspaces=false,
+    tabsize=2,
+    breaklines=true,
+    breakatwhitespace=false,
+}
+
+\newcommand{\csq}[1]{\reflectbox{''}#1''}  %This produces CS style quotes.
+
+
+
+\begin{document}
+
+
+\begin{flushright}
+loops\end{flushright}
+
+\vspace*{-1.5em}
+\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
+
+
+\vspace*{2em}
+
+\begin{enumerate}
+
+\input{loops_s1}
+\input{loops_s2}
+\input{loops_s3}
+
+
+
+
+%\item Write a program that will convert some amount of pennies into the fewest amount of dollars and coins possible.  For example, 75 pennies is 3 quarters.  86 pennies is 3 quarters, 1 dime, and 1 penny.  130 pennies is 1 dollar, 1 quarter and 1 nickel.  Let the user pick the number of pennies.  You may assume the largest input is 499 pennies.\\
+%Hint: the way to do this is to always substitute for the largest denomination if available.  For example, if there is at least 100 pennies substitute for a dollar before quarters.
+
+\end{enumerate}
+\end{document}
+
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 1
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	%paper-based
+	\item 	
+		In mathematics, the factorial of a non-negative integer n, denoted n\!, is the product of all positive
+		integers less than or equal to n. See the table to the right for examples. Function $Fact$ that returns
+		the factorial of a given non-negative integer.
+		\begin{center}
+		    \begin{minipage}{.4\textwidth}
+		        \begin{tabular}{c|l|c}
+		            \textbf{\( n \)} & \textbf{Product} & \textbf{\( n! \)} \\ \hline
+		            0 & 1 & 1 \\
+		            1 & 1 & 1 \\
+		            2 & 2 $\times$ 1 & 2 \\
+		            3 & 3 $\times$ 2 $\times$ 1 & 6 \\
+		            4 & 4 $\times$ 3 $\times$ 2 $\times$ 1 & 24 \\
+		            5 & 5 $\times$ 4 $\times$ 3 $\times$ 2 $\times$ 1 & 120 \\
+		            6 & 6 $\times$ 5 $\times$ 4 $\times$ 3 $\times$ 2 $\times$ 1 & 720 \\
+		        \end{tabular}
+		    \end{minipage}
+		\end{center}
+
+
+\question[5]
+	Write a program to create a word one letter at a time. You should prompt the user to enter a single letter 
+	one at a time until they type done.  
+	Once they type done, output their newly created word. See examples below.
+	
+
+	\begin{figure}[h]
+	\centering
+		\begin{minipage}{.5\textwidth}
+		\centering
+			\includegraphics[height=2.5in]{./imgs/lettersDexter.png}
+			\captionof*{figure}{Example 1}
+		\end{minipage}%
+			%
+		\begin{minipage}{.5\textwidth}
+		\centering
+			\includegraphics[height=2.5in]{./imgs/lettersAbcde.png}
+			\captionof*{figure}{Example 2}
+		\end{minipage}
+	\end{figure}
+
+
+%https://edabit.com/challenge/egMp3GWyN8TPptbZA

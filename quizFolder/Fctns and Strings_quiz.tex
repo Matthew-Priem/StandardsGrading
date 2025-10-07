@@ -1,0 +1,279 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amsfonts} % For math fonts.
+\usepackage{amssymb} % For other math symbols not covered by amsmath.
+\usepackage[pdftex]{graphicx} % For pictures, use \includegraphics[scale=decimal]{pic.png}; must be a .png file type.
+\usepackage{multicol}
+\usepackage{textcomp}
+\usepackage[colorlinks = true, urlcolor = blue]{hyperref}
+\usepackage{enumitem}
+\usepackage{graphbox} 
+\usepackage{subfig}
+\usepackage{multicol}
+\usepackage{nopageno}
+\usepackage{bm}
+
+
+\usepackage{tikz}
+\usetikzlibrary{positioning, calc}
+\usetikzlibrary{shapes.geometric,angles,quotes}
+\usepackage{tikz-3dplot}
+
+
+%page formatting
+\usepackage{fullpage}
+\setlength{\parindent}{0pt}
+
+
+\newcommand{\tab}{\hspace*{0.25in}}
+\newcommand{\csq}[1]{\reflectbox{''}#1''}  %This produces CS style quotes.
+\newcommand{\csqt}[1]{\text{\reflectbox{''}#1''}}  %This produces CS style quotes as text.
+
+
+\usepackage{listings}
+\lstset
+{ %Formatting for code in appendix
+    language=Python,
+    basicstyle=\footnotesize,
+    numbers=left,
+    stepnumber=1,
+    showstringspaces=false,
+    tabsize=2,
+    breaklines=true,
+    breakatwhitespace=false,
+}
+
+
+\begin{document}
+
+
+
+%split_point
+
+%\end{document}
+Lone Star \hfill Fctns and Strings quiz\\
+section 4\\
+\begin{enumerate}
+\item (5.1)
+		When using a security access system, different clearance levels are assigned to users. 
+		In our system, \textit{admin} means full access, \textit{user} means limited access, 
+		and \textit{guest} means view-only access. Write a function named \textbf{access\_rights} 
+		that takes user\_role (a string) as an argument and returns the access rights of a user. 
+
+	\textbf{Examples:}
+	\begin{itemize}
+		\item  access\_rights(\csq{user}) $\rightarrow$ \csq{limited}, 
+		\item  access\_rights(\csq{guest}) $\rightarrow$ \csq{view}, 
+		\item  access\_rights(\csq{admin}) $\rightarrow$ \csq{full}
+	\end{itemize}
+
+
+
+
+
+\item (5.2) 
+		The table below show what your resting heart rate should be based on age and athleticism. 
+		Write a \textbf{function} that returns what the resting heart rate of the user should be. 
+		The arguments for the function will be $age$ (how old the user is) and $athl\_goal$ (athletic goal of user).
+	\begin{center}
+		\begin{minipage}{.45\textwidth}
+			\begin{tabular}{c|cc}
+				& \multicolumn{2}{c}{Athleticism}\\
+				Age & Above Average & Below Average \\ \hline
+				20 -- 39 & 47 -- 72 & 73 -- 93\\
+				40 -- 59 & 46 -- 71 & 72 -- 94\\
+				60 -- 79 & 45 -- 70 & 71 -- 97 \\
+			\end{tabular}
+		\end{minipage}
+	\end{center}
+
+	\textbf{Examples:}
+	\begin{itemize}
+		\item  resting\_rate(45, \csq{Below Average}) $\rightarrow$ \csq{72-94}, 
+		\item  resting\_rate(79, \csq{Above Average}) $\rightarrow$ \csq{45-70}, 
+		\item  resting\_rate(20, \csq{Below Average}) $\rightarrow$ \csq{73-93} 
+	\end{itemize}
+
+
+\item (6.1) 
+		The \textbf{normal human body temperature} is 98.6F in Fahrenheit and 37C in Celsuis. 
+		Create a function that determines if the \textit{temp} is considered a fever(anove normal 
+		body temperature) or not.
+		\textit{temp} will be measured in Fahrenheit and Celsuis.\\
+		Notice: The F or C will always be the last character in the string.
+
+	\textbf{Examples:}
+	\begin{itemize}
+		\item is\_fever(\csq{99F}) $\rightarrow$ True, 
+		\item is\_fever(\csq{37C}) $\rightarrow$ False, 
+		\item is\_fever(\csq{98F}) $\rightarrow$ False, 
+	\end{itemize}
+
+\end{enumerate}
+\pagebreak
+Dot Matrix \hfill Fctns and Strings quiz\\
+section 5\\
+\begin{enumerate}
+\item (5.1)
+		When using a security access system, different clearance levels are assigned to users. 
+		In our system, \textit{admin} means full access, \textit{user} means limited access, 
+		and \textit{guest} means view-only access. Write a function named \textbf{access\_rights} 
+		that takes user\_role (a string) as an argument and returns the access rights of a user. 
+
+	\textbf{Examples:}
+	\begin{itemize}
+		\item  access\_rights(\csq{user}) $\rightarrow$ \csq{limited}, 
+		\item  access\_rights(\csq{guest}) $\rightarrow$ \csq{view}, 
+		\item  access\_rights(\csq{admin}) $\rightarrow$ \csq{full}
+	\end{itemize}
+
+
+
+
+
+\item (5.2) 
+		Write a \textbf{function} that loops through and returns the sum of all odd numbers 
+		between two integers (inclusive). The arguments to the function will be $smaller\_num$ 
+		and $larger\_num$.
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  odd\_sum(0, 7) $\rightarrow$ 16 (since 1+3+5+7 = 16)
+			\item odd\_sum(1,10) $\rightarrow$ 25 (since 1+3+5+7+9 = 25)
+			\item  odd\_sum(50, 517) $\rightarrow$ 66456 
+		\end{itemize}
+
+
+
+\item (6.1)
+		Write a function called \textit{flip\_flop} that takes a string as an argument 
+		and returns  a new word made up of the second half of the word first combined 
+		with the first half of the word second.
+
+		\textbf{Examples:}
+		\begin{itemize}
+			\item \textit{flip\_flop}(\csq{abcd}) $\rightarrow$ \csq{cdab} 
+				(that is, \csq{cd} then \csq{ab} \dots even length)
+			\item \textit{flip\_flop}(\csq{grapes}) $\rightarrow$ \csq{pesgra} 
+				(that is, \csq{pes} then \csq{gra} \dots even length)
+			\item \textit{flip\_flop}(\csq{abcde})$\rightarrow$ \csq{decab}
+				(that is, \csq{de} then \csq{c} then \csq{ab} \dots odd length)
+			\item \textit{flip\_flop}(\csq{cranberries})$\rightarrow$ \csq{rriesecranb}
+				(that is, \csq{rries} then \csq{e} then \csq{cranb} \dots odd length)
+
+		\end{itemize}
+
+%end_of_questions
+%make sure to leave at least one blank line below
+
+\end{enumerate}
+\pagebreak
+Dark Helmet \hfill Fctns and Strings quiz\\
+section 4\\
+\begin{enumerate}
+\item (5.1) 
+		Write a \textbf{function} that returns the sum of the cubes of all positive integers up to a given integer (inclusive). The
+		argument to the function will be $num$ (the number up to which cubes should be summed).
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  cube\_sum(3) $\rightarrow$ 36 ($1^3 + 2^3 + 3^3 = 36$)
+			\item  cube\_sum(8) $\rightarrow$ 1296 ($1^3+2^3+3^3+4^3+5^3+6^3+7^3+8^3=1296$)
+			\item  cube\_sum(-3) $\rightarrow$ \csq{unknown}
+		\end{itemize}
+
+
+%end_of_questions
+%make sure to leave at least one blank line below
+
+\item (5.2) 
+		Write a \textbf{function} that loops through and prints every even number between two
+		integers (inclusive). The arguments to the function will be $smaller\_num$ and 
+		$larger\_num$.
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  output\_even(37, 1050) $\rightarrow$ 38, 40, 42, \dots 1048, 1050, 
+			\item  output\_even(1, 2000) $\rightarrow$ 2, 4, 6, \dots 1998, 2000 
+			\item  output\_even(50, 199) $\rightarrow$ 50, 52, 54, \dots 196, 198
+		\end{itemize}
+
+
+\item (6.1) 
+		Severus Snape seeks to harness powerful spells in the Hogwarts Library, you must 
+		encode them by using the last letter of each word. Create a function called 
+		$last\_letters$ that takes the variable $sentence$ (a string) and returns
+		a string made up of the last letters of each word in the sentence. 
+
+		\textbf{Examples:}
+		\begin{itemize}
+			\item last\_letters(\csq{wingardium leviosa makes objects float}) 
+				$\rightarrow$ \csq{masst}
+			\item last\_letters(\csq{expecto patronum repels dementors}) $\rightarrow$ \csq{omss}
+			\item last\_letters(\csq{the magic is within you}) $\rightarrow$ \csq{ecsnu}
+		\end{itemize}
+
+
+
+\end{enumerate}
+\pagebreak
+President Skroob \hfill Fctns and Strings quiz\\
+section 1\\
+\begin{enumerate}
+\item (5.1) 
+		(Game: heads or tails)  Write a \textbf{function} that lets the user guess whether the flip of a coin 
+		results in heads or tails. The function randomly generates an integer 0 or 1, which 
+		represents head or tail. The function returns if the guess is correct or incorrect. The argument for the function will be $guess$ 
+		(the guess of the user, 0 for heads and 1 for tails).\\
+		Hint: Use the following lines of code to create the function.
+		\begin{verbatim}
+		    from random import randint
+		    value = randint(0,1) #picks a random integer. Either 0 or 1.
+		\end{verbatim}
+		\textbf{Examples:}
+		\begin{itemize}
+			\item  toss\_coin(0) $\rightarrow$ \csq{Correct!} (if the random value is 0) or \csq{Incorrect!} (if the random value is 1), 
+			\item  toss\_coin(1) $\rightarrow$ \csq{Correct!} (if the random value is 1) or \csq{Incorrect!} (if the random value is 0) 
+		\end{itemize}
+
+\item (5.2) 
+		A toy store owner wants to know the total number of batteries needed for all the electronic toys in the store. 
+		The store sells three types of toys:
+		\begin{itemize}
+			\item Electronic dolls, which require \textbf{2} batteries
+			\item Remote-controlled cars, which require \textbf{4} batteries
+			\item Robot dogs, which require \textbf{6} batteries
+		\end{itemize}
+
+
+		Write a \textbf{function} that counts the total number of batteries needed for the toy store and returns the value. 
+		The arguments for the function will be $e\_dolls$ (number of electronic dolls toy store has), $rc\_cars$ 
+		(number of remote-controlled cars toy store has), and $robo\_dogs$ (number of robot dogs toy store has).\\
+
+	\textbf{Examples:}
+	\begin{itemize}
+		\item  battery\_counter(4, 3, 2) $\rightarrow$ 32, 
+		\item  battery\_counter(1, 1, 1) $\rightarrow$ 12, 
+		\item  battery\_counter(0, 10, 0) $\rightarrow$ 40 
+	\end{itemize}
+
+
+\item (6.1) 
+		%https://edabit.com/challenge/dBqLSk6qvudNdZrSx
+		The \textbf{boiling point} of water is 212F in Fahrenheit and 100C in Celsuis. 
+		Create a function that determines if the \textit{temp} is considered boiling or not.
+		\textit{temp} will be measured in Fahrenheit and Celsuis.\\
+		Notice: The F or C will always be the last character in the string.
+
+	\textbf{Examples:}
+	\begin{itemize}
+		\item is\_boiling(\csq{212F}) $\rightarrow$ True, 
+		\item is\_boiling(\csq{100C}) $\rightarrow$ True, 
+		\item is\_boiling(\csq{0F}) $\rightarrow$ False, 
+	\end{itemize}
+
+
+\end{enumerate}
+\pagebreak
+\end{document}

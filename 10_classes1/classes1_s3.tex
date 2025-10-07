@@ -1,0 +1,323 @@
+%standard 11.3
+
+%start_of_questions
+
+
+
+%new_question
+
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 5
+	% Difficulty: 3
+%%%%%%%%%%%%%%%%%%%%%
+	\item Create an \textit{Employee} class.\\
+	\begin{minipage}{.6\textwidth}		
+		An \textit{Employee} has
+		\begin{itemize}
+			\item A name
+			\item A title
+			\item A salary	
+		\end{itemize}
+	
+		An \textit{Employee} can do
+		\begin{itemize}
+			\item a greeting
+			\item request raise
+		\end{itemize}
+	\end{minipage} 
+	%
+	\begin{minipage}{.4\textwidth}
+		This class ``looks'' like 
+				
+		\vspace*{1em}
+		\begin{tabular}{|l|}
+			\hline Employee\\ \hline
+			name\\ title\\ salary\\ \hline
+			greeting\\ request\_raise \\  \hline
+		\end{tabular}
+	\end{minipage}
+
+	\vspace*{2ex}
+	You should write getters and setters for each of the instance variables.\\
+
+	A greeting should be of the form: \underline{Hello.  My name is \textit{name}.  
+	I'm the \textit{title}.}\\
+	\tab \tab eg. Hello.  My name is Eugene.  I'm the CEO.\\
+
+	A raise request should request a \underline{6\%} raise.\\  It should be of the form: 
+	I'm currently making \textit{salary}.  I'd like new salary of \textit{new amount}.\\
+	\tab \tab eg. I'm currently making \$100.  I'd like new salary of \$106.\\
+
+
+
+%new_question
+
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 6
+	% Difficulty: 3
+%%%%%%%%%%%%%%%%%%%%%
+	\item Create a \textit{Student} class.\\
+	\begin{minipage}{.6\textwidth}		
+		A \textit{Student} has
+		\begin{itemize}
+			\item A name
+			\item A major
+			\item A GPA	
+		\end{itemize}
+	
+		A \textit{Student} can do
+		\begin{itemize}
+			\item introduce themselves
+			\item study for exam
+		\end{itemize}
+	\end{minipage} 
+	%
+	\begin{minipage}{.4\textwidth}
+		This class \csq{looks} like
+		 
+		\vspace*{1em}
+		\begin{tabular}{|l|}
+			\hline Student\\ \hline
+			name\\ major\\ GPA\\ \hline
+			introduce\\ study\_for\_exam \\  \hline
+		\end{tabular}
+	\end{minipage}
+
+	\vspace*{2ex}
+	You should write getters and setters for each of the instance variables.\
+
+	An introduction should be of the form: \underline{Hi, I'm  \textit{name}.  
+	I'm studying \textit{major}.}\\
+	\tab \tab eg. Hi. I'm Maria. I'm studying Computer Science.\\
+
+	Studying for an exam should increase the GPA by \underline{0.2} points. (up to a maximum of 4.0)\\  
+	It should be of the form: \\
+	I'm hitting the books! My GPA increased from \textit{old GPA} to \textit{new GPA}.\\
+	\tab \tab eg. I'm hitting the books! My GPA increased from 3.5 to 3.7.\\
+
+
+
+
+%new_question
+
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 10
+	% Difficulty: 3
+%%%%%%%%%%%%%%%%%%%%%
+	\item Create a \textit{Vector} class.\\
+	\begin{minipage}{.6\textwidth}
+		A \textit{Vector} has
+		\begin{itemize}
+			\item x\_direction 
+			\item y\_direction
+		\end{itemize}
+		
+		A \textit{Vector} can do
+		\begin{itemize}
+			\item get\_magnitude
+		\end{itemize}
+	\end{minipage}
+		%
+	\begin{minipage}{.4\textwidth}
+		This class ``looks'' like 
+				
+		\vspace*{1em}
+		\begin{tabular}{|l|}
+			\hline Vector\\ \hline
+			x\_direction\\ y\_direction\\ \hline
+			get\_magnitude\\  \hline
+		\end{tabular}
+	\end{minipage}
+
+	\vspace*{2ex}
+	Create a constructor method that initializes all instance variables.\\
+	You should write getters and setters for each of the instance variables.\\
+	Instantiate an instance of the class. You may pass any initial values of your choosing.
+	
+	Hint: magnitude is calculated as $\sqrt{x^2 + y^2}$.
+
+
+%new_question
+
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 11
+	% Difficulty: 3
+%%%%%%%%%%%%%%%%%%%%%
+	\item Create a \textit{ColorRGB} class.\\
+	\begin{minipage}{.6\textwidth}		
+		A \textit{ColorRGB} has
+		\begin{itemize}
+			\item red 
+			\item green
+			\item blue
+		\end{itemize}
+
+		A \textit{ColorRGB} can do
+		\begin{itemize}
+			\item to\_grayscale
+		\end{itemize}
+	\end{minipage}
+		%
+	\begin{minipage}{.4\textwidth}
+		This class ``looks'' like 
+				
+		\vspace*{1em}
+		\begin{tabular}{|l|}
+			\hline ColorRGB\\ \hline
+			red\\ green\\ blue\\ \hline
+			to\_grayscale\\  \hline
+		\end{tabular}
+	\end{minipage}
+
+	\vspace*{2ex}
+	Create a constructor method that initializes all instance variables.\\
+	You should write getters and setters for each of the instance variables.\\
+	Instantiate an instance of the class. You may pass any initial values of your choosing.
+
+	The to\_grayscale() method should return the grayscale value calculated as: 
+		$$0.3 * \text{red} + 0.59 * \text{green} + 0.11 * \text{blue}$$
+	That is, it will just return a number (a float).
+
+	%Create an \_\_str\_\_ method that returns a string in the format:\\
+	%"RGB: ([red], [green], [blue])"\\
+	%\tab \tab eg. "RGB: (255, 128, 64)".\\
+
+
+%new_question
+
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 12
+	% Difficulty: 3
+%%%%%%%%%%%%%%%%%%%%%
+	\item Create a \textit{TemperatureInCelsius} class.\\
+	\begin{minipage}{.6\textwidth}		
+		A \textit{TemperatureInCelsius} has
+		\begin{itemize}
+			\item temp\_value
+		\end{itemize}
+
+		A \textit{TemperatureInCelsius} can do
+		\begin{itemize}
+			\item to\_fahrenheit
+		\end{itemize}
+	\end{minipage}
+		%
+	\begin{minipage}{.4\textwidth}
+		This class ``looks'' like 
+				
+		\vspace*{1em}
+		\begin{tabular}{|l|}
+			\hline TemperatureInCelsius\\ \hline
+			temp\_value\\ \ \\  \hline
+			to\_fahrenheit\\ \ \\ \hline
+		\end{tabular}
+	\end{minipage}
+
+
+
+	\vspace*{2ex}
+	Clarification: temp\_value is the temperature in Celsius.\\
+	Create a constructor method that initializes all instance variables.\\
+	You should write getters and setters for each of the instance variables.\\
+	Instantiate an instance of the class. You may pass any initial values of your choosing.
+	
+	The to\_fahrenheit() method should return the temperature in Fahrenheit calculated as:\\
+	Fahrenheit = (Celsius * 9/5) + 32.\
+
+	%Create an \_\_str\_\_ method that returns a string in the format:\\
+	%"Temp: [celsius]C, Humidity: [humidity]\%, Pressure: [pressure]hPa"\\
+	%\tab \tab eg. "Temp: 25.0C, Humidity: 65\%, Pressure: 1013hPa".\\
+
+
+%new_question
+
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 13
+	% Difficulty: 3
+%%%%%%%%%%%%%%%%%%%%%
+	\item Create a \textit{Rectangle} class.\\
+	\begin{minipage}{.6\textwidth}
+		A \textit{Rectangle} has
+		\begin{itemize}
+			\item width 
+			\item height
+		\end{itemize}
+
+		A \textit{Rectangle} can do
+		\begin{itemize}
+			\item calculate\_area
+		\end{itemize}
+	\end{minipage}
+		%
+	\begin{minipage}{.4\textwidth}
+		This class ``looks'' like 
+				
+		\vspace*{1em}
+		\begin{tabular}{|l|}
+			\hline Rectangle\\ \hline
+			width\\ height \\  \hline
+			calculate\_area\\ \hline
+		\end{tabular}
+	\end{minipage}
+
+
+	\vspace*{2ex}
+	Create a constructor method that initializes all instance variables.\\
+	You should write getters and setters for each of the instance variables.\\
+	Instantiate an instance of the class. You may pass any initial values of your choosing.
+	
+	The calculate\_area() method should return the area calculated as: width * height.\\
+
+	%Create an \_\_str\_\_ method that returns a string in the format:\\
+	%"Rectangle([width] × [height], [color])"\\
+	%\tab \tab eg. "Rectangle(10.5 × 20.0, blue)".\\
+
+
+%new_question
+
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 14
+	% Difficulty: 3
+%%%%%%%%%%%%%%%%%%%%%
+	\item Create a \textit{Circle} class.\\	
+	\begin{minipage}{.6\textwidth}
+		A \textit{Circle} has
+		\begin{itemize}
+			\item radius 
+		\end{itemize}
+
+		A \textit{Circle} can do
+		\begin{itemize}
+			%\item calculate\_area()
+			\item calculate\_circumference
+		\end{itemize}
+	\end{minipage}
+		%
+	\begin{minipage}{.4\textwidth}
+		This class ``looks'' like 
+				
+		\vspace*{1em}
+		\begin{tabular}{|l|}
+			\hline Circle\\ \hline
+			radius\\ \ \\  \hline
+			calculate\_circumference\\ \hline
+		\end{tabular}
+	\end{minipage}
+
+	\vspace*{2ex}
+	Create a constructor method that initializes all instance variables.\\
+	You should write getters and setters for each of the instance variables.\\
+	Instantiate an instance of the class. You may pass any initial values of your choosing.	
+
+	%The calculate\_area() method should return the area calculated as: $\pi \cdot \text{radius}^2$.\\
+	The calculate\_circumference() method should return the circumference calculated as: $2 \cdot \pi \cdot \text{radius}$.\\
+
+	%Create an \_\_str\_\_ method that returns a string in the format:\\
+	%"Circle(radius=[radius], color=[color], filled=[filled])"\\
+	%\tab \tab eg. "Circle(radius=5.0, color=red, filled=True)".\\
+
+
+%end_of_questions
+%make sure to leave at least one blank line below
+
+

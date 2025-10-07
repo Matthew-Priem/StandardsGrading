@@ -1,0 +1,155 @@
+%standard 10.2
+
+
+%start_of_questions
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 8
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	\item 
+		Given a positive integer $n$, the following rules will always create a sequence that 
+		ends with 1, called Hailstone Sequence:
+		\begin{enumerate}
+			\item If $n$ is even, divide by 2
+			\item If $n$ is odd, multiply by 3 and add 1 (i.e. $3n+1$)
+			\item Continue until $n$ is 1
+		\end{enumerate}
+		Write a \textbf{function} that returns a list with the hailstone sequence starting at $n$. 
+		The argument to the function will be $n$ (the integer to start the sequence from).\\
+
+		\textbf{Debug this Solution:}\\
+		\mbox{ \hspace*{0.25in}	\lstinputlisting[language=Python]{./code/debugger_p9_HailstoneSequence.py}}
+
+%Error 1: n/n should be n
+%Error 2: sequence.append(n) should have an extra indentation
+%Error 3: while n == 1 should be while != 1
+\pagebreak
+
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 9
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	\item
+		YouTube currently displays a like and a dislike button, allowing you to express your opinions 
+		about particular content. 
+		It's set up in such a way that you cannot like and dislike a video at the same time.
+		There are two other interesting rules to be noted about the interface:
+		\begin{enumerate}
+			\item Pressing a button, which is already active, will undo your press.
+			\item If you press the like button after pressing the dislike button, the like button overwrites 
+				the previous \csq{dislike} state. The same is true for the other way round.
+		\end{enumerate}
+		Write a \textbf{function} that takes in a list of button inputs $events$ and returns the final state.\\
+
+		\textbf{Debug this Solution:}\\
+		\mbox{ \hspace*{0.25in}	\lstinputlisting[language=Python]{./code/debugger_p10_YouTube.py}}
+
+%Error 1: initial state = "like" should be state = "nothing"
+%Error 2: for event in range(events) should be for event in events
+%Error 3: if event != state: should be if event == state:
+\pagebreak
+
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 10
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	\item 	
+		%https://edabit.com/challenge/yL5WmWTCNwwb4GnR7
+		In each input list, every number repeats at least once, except for two. Write a \textbf{function} 
+		that takes an array $numbers$ and returns the two unique numbers.\\
+
+		\textbf{Debug this Solution:}\\
+		\mbox{ \hspace*{0.25in}	\lstinputlisting[language=Python]{./code/debugger_p11_TwoUniqueNumbers.py}}
+
+%Error 1: for num in range(len(numbers)) should be for num in numbers
+%Error 2: code in if and else statements should be swapped.
+%Error 3: number_dicitonary.values() should be number_dicitonary
+\pagebreak
+
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 11
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	\item 
+		%https://edabit.com/challenge/6Pf5GGG6HnzbB95gf
+		Write a \textbf{function} that returns a list with the factors of a given integer. 
+		The argument of the function will be $num$ (integer to find factors for).\\
+
+		\textbf{Debug this Solution:}\\
+		\mbox{ \hspace*{0.25in}	\lstinputlisting[language=Python]{./code/debugger_p13_Factors.py}}
+
+%Error 1: for i in range(1, num): should be for i in range(1, num+1):
+%Error 2:  if num % i != 0: should be if num % i == 0:
+%Error 3: factors.add(i) should be factors.append(i)
+\pagebreak
+
+
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 12
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+\item
+	Write a \textbf{function} that takes a list of words $words$ and returns a dictionary where 
+	the keys categorize words based on whether they are palindromes. 
+	The categories are defined as follows:
+	\begin{enumerate}  
+		\item \csq{Palindrome} includes words that read the same forward and backward.  
+		\item \csq{Non-palindrome} includes all other words.  
+	\end{enumerate}  
+
+		\textbf{Debug this Solution:}\\
+		\mbox{ \hspace*{0.25in}	\lstinputlisting[language=Python]{./code/debugger_p14_Palindromes.py}}
+
+%Error 1: reduce indent of if and else
+%Error 2: put "reversed_word = ' ' '' inside first loop
+%Error 3: switch content of if and else OR change if statement from == to !=
+\pagebreak
+
+
+
+%new_question
+
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 13
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	\item
+		(Game: Odd or Even)  Write a \textbf{function} that lets the user guess whether a randomly 
+		generated number is odd or even.  The function randomly generates an integer between 0 and 9 
+		(inclusive) and returns whether the user's guess is correct or incorrect. The argument for 
+		the function will be $guess$ (the user's guess, either \csq{odd} or \csq{even}), if no 
+		argument is provided then the \textbf{default} guess should be even.\\
+		Hint: Use the following lines of code to create the function.
+		\begin{verbatim}
+		    from random import randint
+		    value = randint(0,9) #picks a random integer between 0-9 inclusive
+		\end{verbatim}
+
+		\textbf{Debug this Solution:}\\
+		\mbox{ \hspace*{0.25in}	\lstinputlisting[language=Python]{./code/debugger_p15_EvenOrOdd.py}}
+
+
+%Error 1: from random import randominteger should be from random import randomint
+%Error 2: def guess(guess="odd"): should be def guess(guess="even"):
+%Error 3: if value // 2 == 0: should be if value % 2 == 0:
+\pagebreak
+
+
+%end_of_questions
+%make sure to leave at least one blank line below
+

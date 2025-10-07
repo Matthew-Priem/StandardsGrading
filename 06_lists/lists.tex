@@ -1,0 +1,665 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amsfonts} % For math fonts.
+\usepackage{amssymb} % For other math symbols not covered by amsmath.
+\usepackage[pdftex]{graphicx} % For pictures, use \includegraphics[scale=decimal]{pic.png}; must be a .png file type.
+\usepackage{multicol}
+\usepackage{textcomp}
+\usepackage[colorlinks = true, urlcolor = blue]{hyperref}
+\usepackage{enumitem}
+\usepackage{graphbox} 
+\usepackage{subfig}
+\usepackage{multicol}
+\usepackage{bm}
+
+\newcommand{\tab}{\hspace*{0.25in}}
+\newcommand{\csq}[1]{\reflectbox{''}#1''}  %This produces CS style quotes.
+
+\usepackage{tikz}
+\usetikzlibrary{positioning, calc}
+\usetikzlibrary{shapes.geometric,angles,quotes}
+
+
+\usepackage{fullpage}
+\usepackage{listings}
+\lstset
+{ %Formatting for code in appendix
+    language=Python,
+    basicstyle=\footnotesize,
+    numbers=left,
+    stepnumber=1,
+    showstringspaces=false,
+    tabsize=2,
+    breaklines=true,
+    breakatwhitespace=false,
+}
+
+
+\begin{document}
+
+
+\begin{flushright}
+loops\end{flushright}
+
+\vspace*{-1.5em}
+\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
+
+
+\vspace*{2em}
+
+\begin{enumerate}
+
+
+\input{lists_s1}
+\input{lists_s2}
+\input{lists_s3}
+
+
+
+
+%end_of_questions
+
+
+
+
+%https://leetcode.com/problems/two-sum/description/?envType=problem-list-v2&envId=hash-table
+
+
+
+
+\end{enumerate}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 1
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+%https://edabit.com/challenge/R4D59C9CQbJvqWaKd
+	%new
+	\item
+		A baseball player's batting average is calculated by the following formula:\\
+		\begin{center}
+		BA = (number of hits) / (number of official at-bats)\\
+		\end{center}
+		Batting averages are always expressed rounded to the nearest thousandth with no leading zero. 
+		The top 3 MLB batting averages of all-time are:
+		\begin{enumerate}
+			\item Ty Cobb .366
+			\item Rogers Hornsby .358
+			\item Shoeless Joe Jackson .356
+		\end{enumerate}
+		The given list represents a season of games. Each list item indicates a player's [hits, official at bats] per game. 
+		Write a \textbf{function} that takes in a list of $games$ (2 dimensional list) and returns a string with the player's
+		 seasonal batting average rounded to the nearest thousandth.
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  batting\_avg([[0, 0], [1, 3], [2, 2], [0, 4], [1, 5]]) $\rightarrow$ \csq{.286},
+			\item  batting\_avg([[2, 5], [2, 3], [0, 3], [1, 5], [2, 4]]) $\rightarrow$ \csq{.350},
+			\item  batting\_avg([[2, 3], [1, 5], [2, 4], [1, 5], [0, 5]]) $\rightarrow$ \csq{.273},
+		\end{itemize}
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 1
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+%https://edabit.com/challenge/J2apiSnJE4RaGTj6x
+	%new
+	\item
+		Given what is supposed to be typed $correct\_phrase$ and what is actually typed $actual\_phrase$, write a \textbf{function} that returns the broken key(s).
+		 The function looks like:\\
+		\begin{center}
+		find\_broken\_keys(correct phrase, what you actually typed)\\
+		\end{center}
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  find\_broken\_keys(\csq{happy birthday}, \csq{hawwy birthday}) $\rightarrow$ [\csq{p}],
+			\item  find\_broken\_keys(\csq{starry night}, \csq{starrq light}) $\rightarrow$ [\csq{y}, \csq{n}]
+			\item  find\_broken\_keys(\csq{beethoven}, \csq{affthoif5}) $\rightarrow$ [\csq{b}, \csq{e}, \csq{v}, \csq{n}]
+		\end{itemize}
+
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 1
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+%https://edabit.com/challenge/MFteyMABeuGaga3a7
+	%new
+	\item
+		When coloring a striped pattern, you may start by coloring each square sequentially, meaning you spend time needing to switch coloring pencils.
+		Write a \textbf{function} where given a list of colors $cols$, return how long it takes to color the whole pattern. Note the following times:
+		\begin{itemize}
+			\item  It takes 1 second to switch between pencils.
+			\item  It takes 2 seconds to color a square.
+		\end{itemize}
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  color\_pattern\_times([\csq{Red}, \csq{Blue}, \csq{Red}, \csq{Blue}, \csq{Red}]) $\rightarrow$ 14, Since there are 5 colors with 2 seconds each and you need to switch colors pencils 4 times. 
+			so (2 x 5) + (4 x 1) = 14
+			\item  color\_pattern\_times([\csq{Blue}]) $\rightarrow$ 2,
+			\item  color\_pattern\_times([\csq{Red}, \csq{Yellow}, \csq{Green}, \csq{Blue}]) $\rightarrow$ 11,
+			\item  color\_pattern\_times([\csq{Blue}, \csq{Blue}, \csq{Blue}, \csq{Red}, \csq{Red}, \csq{Red}]) $\rightarrow$ 13
+		\end{itemize}
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 1
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	%new
+	\item
+		When painting a row of fence posts, you must change brushes whenever the color changes.
+		Write a \textbf{function} where given a list of colors $cols$, returns how long it takes to paint the entire fence. Consider the following times:
+		\begin{itemize}
+			\item  It takes 3 seconds to paint one fence post.
+			\item  It takes 2 seconds to switch brushes when changing colors.
+		\end{itemize}
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  paint\_fence\_time([\csq{Red}, \csq{Blue}, \csq{Red}, \csq{Blue}, \csq{Red}]) $\rightarrow$ 19, Since there are 5 fence posts with 3 seconds each, and you switch brushes 4 times.
+			So, (3 × 5) + (2 × 4) = 19
+			\item  paint\_fence\_time([\csq{Blue}]) $\rightarrow$ 3
+			\item  paint\_fence\_time([\csq{Red}, \csq{Yellow}, \csq{Green}, \csq{Blue}]) $\rightarrow$ 17
+			\item  paint\_fence\_time([\csq{Blue}, \csq{Blue}, \csq{Blue}, \csq{Red}, \csq{Red}, \csq{Red}]) $\rightarrow$ 17
+		\end{itemize}
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 1
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+%https://edabit.com/challenge/q7BdzRw4j7zFfFb4R
+	%new
+	\item
+		Write a \textbf{function} that takes two lists $letters$ and $numbers$ and combines them by alternatingly taking elements from each list in turn.
+		\begin{itemize}
+			\item  The lists may be of different lengths, with at least one character / digit.
+			\item  The first list will contain string characters (lowercase, a-z).
+			\item  The second list will contain integers (all positive).
+		\end{itemize}
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  merge\_lists([\csq{a}, \csq{b}, \csq{c}, \csq{d}, \csq{e}], [1, 2, 3, 4, 5]) $\rightarrow$ [\csq{a}, 1, \csq{b}, 2, \csq{c}, 3, \csq{d}, 4, \csq{e}, 5]
+			\item  merge\_lists([\csq{a}, \csq{b}, \csq{c}, \csq{d}, \csq{e}, \csq{f}], [1, 2, 3]) $\rightarrow$ [\csq{a}, 1, \csq{b}, 2, \csq{c}, 3, \csq{d}, \csq{e}, \csq{f}]
+			\item  merge\_lists([\csq{f}, \csq{d}, \csq{w}, \csq{t}], [5, 3, 7, 8]) $\rightarrow$ [\csq{f}, 5, \csq{d}, 3, \csq{w}, 7, \csq{t}, 8]
+		\end{itemize}
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 1
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	%new
+	\item
+		Write a \textbf{function} that takes two lists, $words$ and $symbols$, and merges them by alternating elements from each list in turn.
+		\begin{itemize}
+			\item  The lists may be of different lengths, but at least one element is guaranteed.
+			\item  The first list $words$ will contain strings (lowercase words).
+			\item  The second list (symbols) will contain single-character symbols (e.g., !, @, \#, \$).
+		\end{itemize}
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  merge\_words\_symbols([\csq{apple}, \csq{banana}, \csq{cherry}], [\csq{!}, \csq{@}, \csq{\#}]) $\rightarrow$ [\csq{apple}, \csq{!}, \csq{banana}, \csq{@}, \csq{cherry}, \csq{\#}]
+			\item  merge\_words\_symbols([\csq{hello}, \csq{world}], [\csq{\$}, \csq{\%}, \csq{\&}, \csq{*}]) $\rightarrow$ [\csq{hello}, \csq{\$}, \csq{world}, \csq{\%}, \csq{\&}, \csq{*}]
+			\item  merge\_words\_symbols([\csq{cat}, \csq{dog}, \csq{elephant}],[\csq{\^}, \csq{\&}]) $\rightarrow$ [\csq{cat}, \csq{\^}, \csq{dog}, \csq{\&}, \csq{elephant}]
+		\end{itemize}
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 1
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+%https://edabit.com/challenge/5uMJmbN2uihcyEu75
+	%new
+	\item
+		Write a \textbf{function} that takes a list of $hours$ and returns the total weekly salary.
+		\begin{itemize}
+			\item  The input list hours is listed sequentially, ordered from Monday to Sunday.
+			\item  A worker earns \$10 an hour for the first 8 hours.
+			\item  For every overtime hour, he earns \$15.
+			\item  On weekends, the employer pays double the usual rate, regardless how many hours were worked previously that week. 
+			For instance, 10 hours worked on a weekday would pay 80+30 = \$110, but on a weekend it would pay 160+60 = \$220.
+		\end{itemize}
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  weekly\_pay([8, 8, 8, 8, 8, 0, 0]) $\rightarrow$ 400
+			\item  weekly\_pay([10, 10, 10, 0, 8, 0, 0]) $\rightarrow$ 410
+			\item  weekly\_pay([0, 0, 0, 0, 0, 12, 0]) $\rightarrow$ 280
+		\end{itemize}
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 1
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+%https://edabit.com/challenge/5uMJmbN2uihcyEu75
+	%new
+	\item
+		Write a \textbf{function} that retrieves every number that is strictly larger than every number that follows it.
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  larger\_than\_right([3, 13, 11, 2, 1, 9, 5]) $\rightarrow$ [13, 11, 9, 5]
+			\item  larger\_than\_right([5, 5, 5, 5, 5, 5]) $\rightarrow$ [5], Since the last number is larger than all the numbers on the right
+			\item  larger\_than\_right([5, 9, 8, 7]) $\rightarrow$ [9, 8, 7]
+		\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 1
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	%paper-based
+	\item
+		You are in charge of the cake for a child's birthday. You have decided the cake will have one candle for each year of their total
+		age. They will only be able to blow out the tallest of the candles.\\
+		Count how many candles are tallest.
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  birthday\_cake\_candles([4, 4, 1, 3]) $\rightarrow$ 2
+				\# The maximum height of candles are four units high
+				\# There are two of them, so you return 2
+			\item  birthday\_cake\_candles([3, 2, 1, 3]) $\rightarrow$ 2
+			\item  birthday\_cake\_candles([82, 49, 82, 82, 41, 82, 15, 63, 38, 25]) $\rightarrow$ 4
+		\end{itemize}
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 1
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	%paper-based
+	\item
+		A group of friends have decided to start a secret society. The name will be the first letter of each of their names.
+		Create a function that takes in a list of names and returns the name of the secret society.
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  society\_name(["Adam", "Sarah", "Malcom"]) $\rightarrow$ "ASM"
+			\item  society\_name(["Cho", "Harry", "Luna", "Newt"]) $\rightarrow$ "CHLN"
+			\item  society\_name(["Phoebe", "Chandler", "Rachel", "Ross", "Monica", "Joey"]) $\rightarrow$ "PCRRMJ"
+		\end{itemize}
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 1
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	%paper-based
+	\item
+		Given a non-empty list of integers, write code that prints the minimum value in the list without using the built-in function min().
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  lyst = [5, 12, 3, 8, 4] $\rightarrow$ 3
+			\item  lyst = [78, 121, 312, 89, 1221] $\rightarrow$ 78
+			\item  lyst = [9, 0, -1, 8] $\rightarrow$ -1
+		\end{itemize}
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 1
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	%paper-based
+	\item
+		Write a function named $find\_even\_nums$ that takes a single number as an argument and returns a list containing all
+		the even numbers between 1 and the provided arugment (inclusively).
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  find\_even\_nums(8) $\rightarrow$ [2, 4, 6, 8]
+			\item  find\_even\_nums(4) $\rightarrow$ [2, 4]
+			\item  find\_even\_nums(2) $\rightarrow$ [2]
+		\end{itemize}
+
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 1
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	%paper-based
+	\item 
+		Create an initially empty list named $fruit\_lyst$. Write code to add the following fruit to the $fruit\_lyst$ one at a time:
+		"apple", "banana", "orange".
+		The result should be ["apple", "banana", "orange"]
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 1
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	%paper-based
+	\item 
+		Create a list of 100 integers whose value and index are the same, for example L[5] = 5.
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 1
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	%paper-based
+	\item 
+		Write code that calculates the mean of a list of integers names $numbers$
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 1
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	%paper-based
+	\item 
+		Given a list of positive integers named $my\_list$, write code that prints the largest number in $my\_list$, without using the
+		built-in function max().
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 1
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	%paper-based
+	\item 
+		For a list of distinct integers named $numbers$, write code to print any paris that add to 10.
+		For example, if numbers = [3, 8, -1, 5, 2, 7], then it should print 3 \& 7 and 2 \& 8.
+		Hint: Distinct mean there are no repeated numbers in the list.
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 1
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	%paper-based
+	\item 
+		Create a list of all the integers between 1 and 1000 that are multiples of 8 and 12. 
+		Hint: The first five elements of this list should be 24, 48, 72, 96, 120
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 1
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	%paper-based
+	\item 
+		Write a function named $list\_of\_squares$ that takes a list of numbers as an argument, and
+		returns a list of the squares of those numbers. For example, [1, 2, 3] $\rightarrow$ [1, 4, 9]
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 1
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	%paper-based
+	\item 
+		Write code to create a list containing 10,000 x's. The result should look like [x, x,..., x]
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 1
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	%paper-based
+	\item 
+		Write a function that takes a list of positive numbers as an argument, and returns the maximum value of the list.
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 1
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	%paper-based
+	\item 
+		For a list of integers named $data$, write code to store all the odd numbers. Store them in a list named $odd\_data$.
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 1
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	%paper-based
+	\item 
+		For a list of floats named $data$, write code that multiplies each number by 2.
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 1
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	%paper-based
+	\item 
+		Given a list of words named $myList$, print all the words from $myList$ that start with either an M or m.
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 1
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	%paper-based
+	\item 
+		Write a loop that replaces each number in a list named \textbf{numbers} with its absolute value.
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 1
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	%paper-based
+	\item 
+		The range of a list of numbers is the largest number in the list minus the smallest. Given a list
+		of positive numbers named $data$, write code to calculate the range of the list. Do not use the built-in functions
+		min() and max().
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 1
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	%paper-based
+	\item 
+		Create a list that stores every other odd number starting at 1. Continue storing numbers in this way until you
+		have stored a total of 100 numbers.\\
+		Hint: the result should look like 1, 5, 8, 13...
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 1
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	%paper-based
+	\item 
+		Given a list of words named $words$, print all the words from $words$ that contain an x.
+		That is, if a word has an $x$ in it, print that word. Additionally, report how many words are printed in total.
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 1
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	%paper-based
+	\item 
+		Create a list containing exactly 1000 a's.
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 1
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	%paper-based
+	\item 
+		Given the list letters = ["a", "b", "c", ..., "z"], create a new list that is ["a1", "b2", "c3", ..., "z26"]
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 1
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	%paper-based
+	\item 
+		For a list of integers named myList, write code to store the numbers from myList that are divisble by 5 and 8. 
+		Store them in a list named newList.
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 1
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	%paper-based
+	\item 
+		For a list of distinct integers named numbers, write code to print any pairs that add to 10. For example, if
+		numbers = [3, 8, -1, 5, 2, 7], then it should print 3 \& 7 and 2 \& 8.
+		Hint: Distinct means there are no repeated numbers in the list.
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 1
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	%new
+	\item 
+		Write a \textbf{function} that returns the first $n$ numbers in the Fibonacci sequence. The argument of the function will be $n$ (the number of Fibonacci numbers to
+		 generate). The Fibonacci sequence is defined as follows:
+		\begin{itemize}
+			\item  For n = 0, F(0) = 0
+			\item  For n = 1, F(1) = 1
+			\item  For $n \geq 2$, F(n) = F(n-1) + F(n-2)
+		\end{itemize}
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  fibonacci(5) $\rightarrow$ [0, 1, 1, 2, 3], 
+			\item  fibonacci(7) $\rightarrow$ [0, 1, 1, 2, 3, 5, 8], 
+			\item  fibonacci(10) $\rightarrow$ [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+		\end{itemize}
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 1
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+%https://edabit.com/challenge/Yfm3h3nT3apARd4gC
+	%new
+	\item 
+		Write a \textbf{function} that takes a list called $dice\_rolls$ consisting of dice rolls from 1-6. Return the sum of your rolls with the following conditions:
+		\begin{enumerate}
+			\item If a 1 is rolled, that is bad luck. The next roll counts as 0.
+			\item If a 6 is rolled, that is good luck. The next roll is multiplied by 2.
+			\item The list length will always be 3 or higher.
+		\end{enumerate}
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  rolls([1, 2, 3]) $\rightarrow$ 4, 
+			\item  rolls([2, 6, 2, 5]) $\rightarrow$ 17, 
+			\item  rolls([6, 1, 1]) $\rightarrow$ 8
+		\end{itemize}
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 1
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+%https://edabit.com/challenge/hYiCzkLBBQSeF8fKF
+	%new
+	\item 
+		A factor chain is a list where each previous element is a factor of the next consecutive element. The following is a factor chain:
+		\begin{verbatim}
+			[3, 6, 12, 36]
+			# 3 is a factor of 6
+			# 6 is a factor of 12
+			# 12 is a factor of 36
+		\end{verbatim}
+		Write a \textbf{function} that takes a list called $factor\_chain$ and returns whether or not a list is a factor chain.
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  is\_factor\_chain([1, 2, 4, 8, 16, 32]) $\rightarrow$ True, 
+			\item  is\_factor\_chain([1, 1, 1, 1, 1, 1]) $\rightarrow$ True, 
+			\item  is\_factor\_chain([2, 4, 6, 7, 12]) $\rightarrow$ False, 
+			\item  is\_factor\_chain([10, 1]) $\rightarrow$ False, 
+		\end{itemize}
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 1
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	%new
+	\item
+		In a debate competition, each judge casts a vote for \csq{agree} or \csq{disagree}.
+		\begin{enumerate}
+			\item If a judge changes their vote, the new vote overwrites the previous one.
+			\item If a judge votes the same way twice, they withdraw their vote.
+			\item If all votes are withdrawn, the result is \csq{undecided}.
+		\end{enumerate}
+		Write a \textbf{function} that takes in a list of votes $votes$ and returns the final decision.
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  judge\_vote([\csq{agree}]) $\rightarrow$ \csq{agree},
+			\item  judge\_vote([\csq{disagree}, \csq{agree}]) $\rightarrow$ \csq{agree},
+			\item  judge\_vote([\csq{agree}, \csq{agree}]) $\rightarrow$ \csq{undecided},
+			\item  judge\_vote([\csq{agree}, \csq{disagree}, \csq{disagree}, \csq{agree}]) $\rightarrow$ \csq{undecided}
+		\end{itemize}

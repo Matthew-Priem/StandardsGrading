@@ -1,0 +1,246 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amsfonts} % For math fonts.
+\usepackage{amssymb} % For other math symbols not covered by amsmath.
+\usepackage[pdftex]{graphicx} % For pictures, use \includegraphics[scale=decimal]{pic.png}; must be a .png file type.
+\usepackage{multicol}
+\usepackage{textcomp}
+\usepackage[colorlinks = true, urlcolor = blue]{hyperref}
+\usepackage{enumitem}
+\usepackage{graphbox} 
+\usepackage{subfig}
+\usepackage{multicol}
+\usepackage{nopageno}
+\usepackage{bm}
+
+
+\usepackage{tikz}
+\usetikzlibrary{positioning, calc}
+\usetikzlibrary{shapes.geometric,angles,quotes}
+\usepackage{tikz-3dplot}
+
+
+%page formatting
+\usepackage{fullpage}
+\setlength{\parindent}{0pt}
+
+
+\newcommand{\tab}{\hspace*{0.25in}}
+\newcommand{\csq}[1]{\reflectbox{''}#1''}  %This produces CS style quotes.
+\newcommand{\csqt}[1]{\text{\reflectbox{''}#1''}}  %This produces CS style quotes as text.
+
+
+\usepackage{listings}
+\lstset
+{ %Formatting for code in appendix
+    language=Python,
+    basicstyle=\footnotesize,
+    numbers=left,
+    stepnumber=1,
+    showstringspaces=false,
+    tabsize=2,
+    breaklines=true,
+    breakatwhitespace=false,
+}
+
+
+\begin{document}
+
+
+
+%split_point
+
+%\end{document}
+Lone Star \hfill Dictionaries quiz\\
+section 4\\
+\begin{enumerate}
+\item (8.1) 	
+		Write a \textbf{function} that takes a string $word$ and returns a dictionary containing the count of each letter in the word. 
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  letter\_count(\csq{hello}) $\rightarrow$ \{\csq{h}: 1, \csq{e}: 1, \csq{l}: 2, \csq{o}: 1\}
+			\item  letter\_count(\csq{mississippi}) $\rightarrow$ \{\csq{m}: 1, \csq{i}: 4, \csq{s}: 4, \csq{p}: 2\}
+			\item  letter\_count(\csq{apple}) $\rightarrow$ \{\csq{a}: 1, \csq{p}: 2, \csq{l}: 1, \csq{e}: 1\}
+		\end{itemize}
+
+
+\item (8.2)
+	Write a \textbf{function} named \textit{majority\_elment} that takes a list of integers named \textit{nums} and returns the majority element. The majority element is the element that has at least half of the occurrences. You may assume that the majority element always exists and is unique.
+	
+	\textbf{Examples:}  
+	\begin{itemize}  
+		\item majority\_elment([3,2,3]) $\rightarrow$ 3
+		\item majority\_elment([2,2,1,1,1,2,2]) $\rightarrow$ 2
+		\item majority\_elment([2,2,3,2,1,2,1,4,4,1,2,2]) $\rightarrow$ 2
+	\end{itemize}
+
+%end_of_questions
+%make sure to leave at least one blank line below
+
+\item (8.3)
+	Write a \textbf{function} that takes a dictionary, called $employee\_salaries$, where the keys are employee names and the values are their salaries. 
+	The function should return a list of employees earning above a given salary.
+	
+	\textbf{Examples:}  
+	\begin{itemize}  
+		\item high\_earners(\{\csq{Alice}: 50000, \csq{Bob}: 75000, \csq{Charlie}: 100000\}, 60000) $\rightarrow$ [\csq{Bob}, \csq{Charlie}]
+		\item high\_earners(\{\csq{David}: 30000, \csq{Emma}: 45000, \csq{Frank}: 50000\}, 40000) $\rightarrow$ [\csq{Emma}, \csq{Frank}]
+		\item high\_earners(\{\csq{George}: 25000, \csq{Hannah}: 27000, \csq{Ian}: 29000\}, 30000) $\rightarrow$ []
+	\end{itemize}
+
+
+%end_of_questions
+%make sure to leave at least one blank line below
+
+\end{enumerate}
+\pagebreak
+Dot Matrix \hfill Dictionaries quiz\\
+section 5\\
+\begin{enumerate}
+\item (8.1) 	
+		Write a \textbf{function} that takes a dictionary, called $people$, containing the names and ages of a group of people, 
+		and returns the name of the oldest person.
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  find\_oldest(\{\csq{Emma}: 71, \csq{Jack}: 45, \csq{Olivia}: 82, \csq{Liam}: 39\}) $\rightarrow$ \csq{Olivia}
+			\item  find\_oldest(\{\csq{Sophia}: 50, \csq{Mason}: 68, \csq{Ava}: 67, \csq{Noah}: 33\}) $\rightarrow$ \csq{Mason}
+			\item  find\_oldest(\{\csq{Ethan}: 25, \csq{Lucas}: 30, \csq{Mia}: 29\}) $\rightarrow$ \csq{Lucas}
+		\end{itemize}
+
+
+
+\item (8.2) 	
+		%https://edabit.com/challenge/yL5WmWTCNwwb4GnR7
+		In each input list, every number repeats at least once, except for two. Write a \textbf{function} that takes an array $numbers$
+		 and returns the two unique numbers.
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  return\_unique([1, 9, 8, 8, 7, 6, 1, 6]) $\rightarrow$ [9, 7],
+			\item  return\_unique([5, 5, 2, 4, 4, 4, 9, 9, 9, 1]) $\rightarrow$ [2, 1],
+			\item  return\_unique([9, 5, 6, 8, 7, 7, 1, 1, 1, 1, 1, 9, 8]) $\rightarrow$ [5, 6]
+		\end{itemize}
+
+
+
+
+\item (8.3) 	
+		Write a \textbf{function} that takes a dictionary called $names$ of tech ids and student names as key-value pairs, and returns a list containing just the student names. 
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  get\_names(\{\csq{01475}: \csq{Steve}, \csq{87469}: \csq{Alice},
+				 \csq{654123}: \csq{Bob} \}) $\rightarrow$ [\csq{Steve}, \csq{Alice}, \csq{Bob}]
+			\item  get\_names(\{ \csq{ID1}: \csq{John}, \csq{ID2}: \csq{Emma}, 
+				\csq{ID3}: \csq{Liam} \}) $\rightarrow$ [\csq{John}, \csq{Emma}, \csq{Liam}]
+			\item  get\_names(\{\}) $\rightarrow$ []
+		\end{itemize}
+
+
+\end{enumerate}
+\pagebreak
+Dark Helmet \hfill Dictionaries quiz\\
+section 4\\
+\begin{enumerate}
+\item (8.1) 	
+		Write a \textbf{function} that takes a dictionary, called $people$, containing the names and ages of a group of people, 
+		and returns the name of the youngest person.
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  find\_youngest(\{\csq{Emma}: 71, \csq{Jack}: 45, \csq{Olivia}: 82, \csq{Liam}: 39\}) $\rightarrow$ \csq{Liam}
+			\item  find\_youngest(\{\csq{Sophia}: 50, \csq{Mason}: 68, \csq{Ava}: 67, \csq{Noah}: 33\}) $\rightarrow$ \csq{Noah}
+			\item  find\_youngest(\{\csq{Ethan}: 25, \csq{Lucas}: 30, \csq{Mia}: 29\}) $\rightarrow$ \csq{Ethan}
+		\end{itemize}
+
+
+
+\item (8.2) 	
+		In each input list, every number repeats at least once, except for one. Write a \textbf{function} that takes an array $numbers$
+		 and returns the single unique number.
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  find\_unique([1, 2, 2, 3, 3, 4, 4]) $\rightarrow$ 1,
+			\item  find\_unique([7, 8, 8, 9, 9, 10, 10]) $\rightarrow$ 7,
+			\item  find\_unique([5, 6, 6, 7, 7, 8, 8, 5, 9]) $\rightarrow$ 9
+		\end{itemize}
+
+
+
+\item (8.3) 	
+		Write a \textbf{function} that takes a dictionary called $names$ of tech ids and student names as key-value pairs, and returns a list containing just the student names. 
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  get\_names(\{\csq{01475}: \csq{Steve}, \csq{87469}: \csq{Alice},
+				 \csq{654123}: \csq{Bob} \}) $\rightarrow$ [\csq{Steve}, \csq{Alice}, \csq{Bob}]
+			\item  get\_names(\{ \csq{ID1}: \csq{John}, \csq{ID2}: \csq{Emma}, 
+				\csq{ID3}: \csq{Liam} \}) $\rightarrow$ [\csq{John}, \csq{Emma}, \csq{Liam}]
+			\item  get\_names(\{\}) $\rightarrow$ []
+		\end{itemize}
+
+
+\end{enumerate}
+\pagebreak
+President Skroob \hfill Dictionaries quiz\\
+section 1\\
+\begin{enumerate}
+\item (8.1) 	
+		%https://edabit.com/challenge/gDtHS9cAy8Fs2X7pH
+		Write a \textbf{function} that takes a list, called $elements$, and returns a dictionary detailing how many times each element is repeated.
+		
+		\textbf{Examples:}  
+		\begin{itemize}  
+			\item count\_repetitions([\csq{cat}, \csq{dog}, \csq{cat}, \csq{cow}, \csq{cow}, \csq{cow}]) $\rightarrow$ \{ \csq{cow}: 3, \csq{cat}: 2, \csq{dog}: 1 \}
+			\item count\_repetitions([1, 5, 5, 5, 12, 12, 0, 0, 0, 0, 0, 0]) $\rightarrow$ \{ 0: 6, 5: 3, 12: 2, 1: 1 \}
+			\item count\_repetitions([\csq{Infinity}, \csq{null}, \csq{Infinity}, \csq{null}, \csq{null}]) $\rightarrow$ \{ \csq{null}: 3, \csq{Infinity}: 2 \}
+		\end{itemize} 
+
+
+%end_of_questions
+%make sure to leave at least one blank line below
+
+\item (8.2)
+	Write a \textbf{function} that takes a list of \textbf{fruits} and returns the total \textbf{caloric value} of the fruits consumed. You may use the following 
+	dictionary named $calories$:
+	\begin{center}
+		\textit{calories} = \{ \csq{apple} : 95, \csq{banana} : 105, \csq{orange} : 62, 
+			\csq{grape} 3, \csq{pear} : 102\}
+	\end{center}
+	Hint: You can calculate the total calories by summing up the caloric values of all valid 
+	fruits in the list. You may assume the \textit{calories} dictionary is defined in your code.  
+	You don't need to rewrite it.
+	
+	
+	\textbf{Examples:}  
+	\begin{itemize}  
+		\item total\_calories([\csq{apple}, \csq{banana}, \csq{orange}]) 
+			$\rightarrow$ 262 (since 95 + 105 + 62 = 262)
+		\item total\_calories([\csq{grape}, \csq{grape}, \csq{grape}, \csq{grape}, \csq{grape}]) 
+			$\rightarrow$ 15
+		\item total\_calories([\csq{banana}, \csq{pear}, \csq{apple}]) $\rightarrow$ 302
+	\end{itemize}
+
+
+\item (8.3)
+	Write a \textbf{function} that takes a dictionary, called $employee\_salaries$, where the keys are employee names and the values are their salaries. 
+	The function should return a list of employees earning above a given salary.
+	
+	\textbf{Examples:}  
+	\begin{itemize}  
+		\item high\_earners(\{\csq{Alice}: 50000, \csq{Bob}: 75000, \csq{Charlie}: 100000\}, 60000) $\rightarrow$ [\csq{Bob}, \csq{Charlie}]
+		\item high\_earners(\{\csq{David}: 30000, \csq{Emma}: 45000, \csq{Frank}: 50000\}, 40000) $\rightarrow$ [\csq{Emma}, \csq{Frank}]
+		\item high\_earners(\{\csq{George}: 25000, \csq{Hannah}: 27000, \csq{Ian}: 29000\}, 30000) $\rightarrow$ []
+	\end{itemize}
+
+
+%end_of_questions
+%make sure to leave at least one blank line below
+
+\end{enumerate}
+\pagebreak
+\end{document}

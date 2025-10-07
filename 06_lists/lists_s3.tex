@@ -1,0 +1,144 @@
+%standard 7.3
+%week6
+
+%start_of_questions
+
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 9
+	% Difficulty: 3
+%%%%%%%%%%%%%%%%%%%%%
+%https://edabit.com/challenge/hYiCzkLBBQSeF8fKF
+	\item 
+		In BlackJack, cards are counted with -1, 0, 1 values:
+		\begin{itemize}
+			\item 2, 3, 4, 5, 6 are counted as +1
+			\item 7, 8, 9 are counted as 0
+			\item 10, j, q, k, a are counted as -1
+		\end{itemize}
+		Write a \textbf{function} that takes a list called $cards$, counts the number, 
+		and returns it from the list of cards provided.
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  count([5, 9, 10, 3, \csq{j}, \csq{a}, 4, 8, 5]) $\rightarrow$ 1, 
+			\item  count([\csq{a}, \csq{a}, \csq{k}, \csq{q}, \csq{q}, \csq{j}]) $\rightarrow$ -6, 
+			\item  count([\csq{a}, 5, 5, 2, 6, 2, 3, 8, 9, 7]) $\rightarrow$ 5
+		\end{itemize}
+
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 10
+	% Difficulty: 3
+%%%%%%%%%%%%%%%%%%%%%
+%https://edabit.com/challenge/rMr8yRxS8TeF9pDyn
+	\item 
+		There's a great war between the even and odd numbers. Many numbers already lost 
+		their lives in this war and it's your task to end this. You have to determine 
+		which group sums larger: the evens or the odds. The larger group wins.
+
+		Write a \textbf{function} that takes a list of integers named \textit{numbers}, 
+		sums the even numbers and odd numbers separately, then returns which of the two
+		sums is larger.
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  war\_of\_numbers([2, 8, 7, 5]) $\rightarrow$ 
+				\csq{odds}, (since 2 + 8 = 10, 7 + 5 = 12, odds is larger) 
+			\item  war\_of\_numbers([12, 90, 75, 1, 1]) $\rightarrow$ \csq{evens}, 
+				(12 + 90 = 102, 75 + 1 + 1 = 77, evens is larger) 
+			\item  war\_of\_numbers([2, 10, 22, 243]) $\rightarrow$ \csq{odds}
+		\end{itemize}
+
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 14
+	% Difficulty: 3
+%%%%%%%%%%%%%%%%%%%%%
+%https://edabit.com/challenge/2yHQwkecEHZBfHcmN
+	\item
+		To train for an upcoming marathon, Johnny goes on one long-distance run each Saturday. 
+		He wants to track how often the number of miles he runs exceeds the previous Saturday. 
+		This is called a progress day. Write a \textbf{function} that takes in a list of miles 
+		run every Saturday and returns Johnny's total number of progress days.
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  progress\_days([3, 4, 1, 2]) $\rightarrow$ 2, 
+				(Two progress days, day 2 since $(4>3)$ and day 4 since $(2>1)$)
+			\item  progress\_days([10, 11, 12, 9, 10]) $\rightarrow$ 3, 
+			\item  progress\_days([6, 5, 4, 3, 2, 9]) $\rightarrow$ 1, 
+			\item  progress\_days([9, 9]) $\rightarrow$ 0
+		\end{itemize}
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 15
+	% Difficulty: 3
+%%%%%%%%%%%%%%%%%%%%%
+	\item
+		To train for an upcoming marathon, Samuel goes on one long-distance run each Saturday. 
+		He wants to track how often the number of miles he runs fall short of the previous Saturday. 
+		This is called a lag day. Write a \textbf{function} that takes in a list of miles 
+		run every Saturday and returns Samuel's total number of lag days.
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  lag\_days([5, 3, 2, 1]) $\rightarrow$ 3, 
+				(3 lag days, day2 since (3$<$5), day3 since (2$<$3), and day4 since (1$<$2))
+			\item  lag\_days([10, 11, 12, 9, 10]) $\rightarrow$ 1, 
+			\item  lag\_days([6, 5, 4, 3, 2, 9]) $\rightarrow$ 4, 
+			\item  lag\_days([9, 9]) $\rightarrow$ 0
+		\end{itemize}
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 19
+	% Difficulty: 3
+%%%%%%%%%%%%%%%%%%%%%%https://leetcode.com/problems/check-if-a-string-is-an-acronym-of-words/description/
+	\item 
+		Let $\bm{s}$ be a string and $\bm{words}$ be a list of strings. The string $\bm{s}$ is 
+		considered an acronym of $\bm{words}$ if it can be formed by concatenating the first 
+		character of each string in $\bm{words}$ in order. For example, \texttt{"ab"} can be formed 
+		from [\texttt{"apple"}, \texttt{"banana"}], but it can't be formed from [\texttt{"bear"}, 
+		\texttt{"aardvark"}]. Write a function that takes a string $\bm{s}$ and a list of strings $
+		\bm{words}$, and returns True if $\bm{s}$ is an acronym of $\bm{words}$, and False 
+		otherwise.
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  is\_acronym(\texttt{"abc"}, [\texttt{"alice"}, \texttt{"bob"}, \texttt{"charlie"}] ) 
+				$\rightarrow$ True\\
+				Explanation: The first character in the words \texttt{"alice"}, \texttt{"bob"}, and 
+				\texttt{"charlie"} are \texttt{"a"}, \texttt{"b"}, and \texttt{"c"}, respectively. 
+				Hence, s = \texttt{"abc"} is the acronym. 			
+			\item  is\_acronym(\texttt{"a"}, [\texttt{"an"}, \texttt{"apple"}] ) $\rightarrow$ False\\
+				Explanation: The first character in the words \texttt{"an"} and \texttt{"apple"} are 
+				\texttt{"a"} and \texttt{"a"}, respectively. The acronym formed by concatenating these 
+				characters is \texttt{"aa"}. Hence, s = \texttt{"a"} is not the acronym.
+			\item  is\_acronym(\texttt{"ngguoy"}, [\texttt{"never"}, \texttt{"gonna"}, \texttt{"give"}, 
+				\texttt{"up"}, \texttt{"on"}, \texttt{"you"}]) $\rightarrow$ True\\\
+				Explanation: By concatenating the first character of the words in the array, we get the 
+				string \texttt{"ngguoy"}. Hence, s = \texttt{"ngguoy"} is the acronym.
+			\item  is\_acronym(\texttt{"ab"}, [\texttt{"apple"}, \texttt{"banana"}, \texttt{cat}]) 
+				$\rightarrow$ False\\
+				Explanation: Wrong length
+			\item  is\_acronym(\texttt{"ab"}, [\texttt{"apple"}, \texttt{""}, \texttt{cat}]) 
+				$\rightarrow$ False\\
+				Explanation: Can't get the first letter in the second string of $\bm{words}$.
+	
+		\end{itemize}
+
+	%Explanation: By concatenating the first character of the words in the array, we get the string "ngguoy". 
+	%Hence, s = "ngguoy" is the acronym.
+
+
+%end_of_questions
+%make sure to leave at least one blank line below
+

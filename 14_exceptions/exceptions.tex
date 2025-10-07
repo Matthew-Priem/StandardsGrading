@@ -1,0 +1,131 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amsfonts} % For math fonts.
+\usepackage{amssymb} % For other math symbols not covered by amsmath.
+\usepackage[pdftex]{graphicx} % For pictures, use %\includegraphics[scale=decimal]{pic.png}; must be a .png file type.
+\usepackage{multicol}
+\usepackage{textcomp}
+\usepackage[colorlinks = true, urlcolor = blue]{hyperref}
+\usepackage{enumitem}
+\usepackage{graphbox} 
+\usepackage{subfig}
+\usepackage{multicol}
+
+\newcommand{\tab}{\hspace*{0.25in}}
+
+\usepackage{tikz}
+\usetikzlibrary{positioning, calc}
+\usetikzlibrary{shapes.geometric,angles,quotes}
+\usepackage{tikz-3dplot}
+
+\newcommand{\csq}[1]{\reflectbox{''}#1''}  %This produces CS style quotes.
+
+
+
+\usepackage{fullpage}
+\usepackage{listings}
+\lstset
+{ %Formatting for code in appendix
+    language=Python,
+    basicstyle=\footnotesize,
+    numbers=left,
+    stepnumber=1,
+    showstringspaces=false,
+    tabsize=2,
+    breaklines=true,
+    breakatwhitespace=false,
+}
+
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%Errors to test:
+		%ValueError
+		%TypeError
+		%ZeroDivisionError
+		%IndexError
+		%KeyError
+		%FileNotFoundError
+		%RecursionError
+		%OverflowError
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{flushright}
+Exceptions\end{flushright}
+
+\vspace*{-1.5em}
+\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
+
+
+\vspace*{2em}
+
+\begin{enumerate}
+
+
+\input{exceptions_s1}
+\input{exceptions_s2}
+\input{exceptions_s3}
+
+\end{enumerate}
+\end{document}
+
+
+
+
+%\item Write a program that will convert some amount of pennies into the fewest amount of dollars and coins possible.  For example, 75 pennies is 3 quarters.  86 pennies is 3 quarters, 1 dime, and 1 penny.  130 pennies is 1 dollar, 1 quarter and 1 nickel.  Let the user pick the number of pennies.  You may assume the largest input is 499 pennies.\\
+%Hint: the way to do this is to always substitute for the largest denomination if available.  For example, if there is at least 100 pennies substitute for a dollar before quarters.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 2
+%%%%%%%%%%%%%%%%%%%%%
+%new_question
+	\item 
+		You're working on a scientific calculator app that includes exponential growth functions.  
+		One feature allows users to enter a number and calculate the value of $e^x$ using Python’s built-in math library.\\
+
+		Write a \textbf{program} that asks the user to enter a number and then calculates the exponential value of $e^x$ using the \csq{math.exp()} function.  
+		The program should handle two types of errors:
+		\begin{itemize}
+			\item If the input is not a valid number, print \csq{Please enter a valid number.}
+			\item If the number is too large and causes an overflow, print \csq{Number too large!}
+		\end{itemize}
+
+		\textbf{Examples:}
+		\begin{itemize}
+			\item \csq{Enter a number:} 3 $\rightarrow$ 20.085536923187668
+			\item \csq{Enter a number:} 1000 $\rightarrow$ \csq{Number too large!}
+			\item \csq{Enter a number:} \csq{apple} $\rightarrow$ \csq{Please enter a valid number.}
+		\end{itemize}
+
+%Errors: ValueError, OverflowError
+
+
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 7
+%%%%%%%%%%%%%%%%%%%%%
+%new_question
+	\item 
+		You're building a countdown feature for a game that uses a recursive function to display numbers from a starting point down to 0.  
+		To make the feature safe and user-friendly, your program should validate the input and handle potential errors.\\
+
+		Write a \textbf{program} that defines a recursive function to count down from a number to 0.  
+		The program should ask the user to enter a starting number and then call the function.
+
+		The program should handle the following error:
+		\begin{itemize}
+			\item If the input is not a valid number, print \csq{Invalid number.}
+			\item If the number is too large and causes too much recursion, print \csq{Recursion limit reached.}
+		\end{itemize}
+
+		\textbf{Examples:}
+		\begin{itemize}
+			\item \csq{Enter a number:} 5 $\rightarrow$ 5 4 3 2 1 0
+			\item \csq{Enter a number:} \csq{hello} $\rightarrow$ \csq{Invalid number.}
+			\item \csq{Enter a number:} 10000 $\rightarrow$ \csq{Recursion limit reached.}
+		\end{itemize}
+
+%Errors: ValueError, RecursionError
+

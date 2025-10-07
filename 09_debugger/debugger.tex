@@ -1,0 +1,211 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amsfonts} % For math fonts.
+\usepackage{amssymb} % For other math symbols not covered by amsmath.
+\usepackage[pdftex]{graphicx} % For pictures, use %\includegraphics[scale=decimal]{pic.png}; must be a .png file type.
+\usepackage{multicol}
+\usepackage{textcomp}
+\usepackage[colorlinks = true, urlcolor = blue]{hyperref}
+\usepackage{enumitem}
+\usepackage{graphbox} 
+\usepackage{subfig}
+\usepackage{multicol}
+
+\newcommand{\tab}{\hspace*{0.25in}}
+
+\usepackage{tikz}
+\usetikzlibrary{positioning, calc}
+\usetikzlibrary{shapes.geometric,angles,quotes}
+\usepackage{tikz-3dplot}
+
+\newcommand{\csq}[1]{\reflectbox{''}#1''}  %This produces CS style quotes.
+
+
+
+\usepackage{fullpage}
+\usepackage{listings}
+\lstset
+{ %Formatting for code in appendix
+    language=Python,
+    basicstyle=\footnotesize,
+	%keywordstyle=\color{blue}\bfseries, % Styles keywords (e.g., def, import)
+	%commentstyle=\color{green}\itshape, % Styles comments
+    numbers=left,
+    stepnumber=1,
+    showstringspaces=false,
+    tabsize=2,
+    breaklines=true,
+    breakatwhitespace=false,
+%    escapechar=\n
+}
+
+
+\begin{document}
+
+
+\begin{flushright}
+Debugging\end{flushright}
+
+\vspace*{-1.5em}
+\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
+
+
+\vspace*{2em}
+
+\begin{enumerate}
+
+\input{debugger_s1}
+\input{debugger_s2}
+
+\end{enumerate}
+\end{document}
+
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 8
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	\begin{minipage}{.6\textwidth}
+		\item Create a \textit{Recipe} class.\\
+		A \textit{Recipe} has
+		\begin{itemize}
+			\item name 
+			\item cooking\_time
+			%\item calores\_per\_serving
+		\end{itemize}
+
+		A \textit{Recipe} can do
+		\begin{itemize}
+			\item is\_quick\_meal
+			%\item calculate\_calories\_total(servings)
+		\end{itemize}
+	\end{minipage}
+		%
+	\begin{minipage}{.4\textwidth}
+		This class ``looks'' like 
+				
+		\vspace*{1em}
+		\begin{tabular}{|l|}
+			\hline Circle\\ \hline
+			name\\ cooking\_time \\  \hline
+			is\_quick\_meal\\ \hline
+		\end{tabular}
+	\end{minipage}
+
+	\vspace*{2ex}
+	Create a constructor method that initializes all instance variables.\\
+	You should write getters and setters for each of the instance variables.\\
+	Instantiate an instance of the class. You may pass any initial values of your choosing.	
+
+	The is\_quick\_meal() method should return True if the cooking\_time is less than 30 minutes and False 
+	if it takes 30 minutes or more.\\
+		
+		\textbf{Debug this Solution:}\\
+		\mbox{ \hspace*{0.25in}	\lstinputlisting[language=Python]{./code/debugger_p8_RecipeClass.py}}
+
+%Error 1: def __init__(name, cooking_time): should be def __init__(self, name, cooking_time):
+%Error 2: return cooking_time should be return self.cooking_time
+%Error 3: return self.cooking_time == 30 should be return self.cooking_time < 30
+\pagebreak
+
+
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 12
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	\begin{minipage}{.6\textwidth}
+	\item Create a \textit{Vector} class.\\
+		A \textit{Vector} has
+		\begin{itemize}
+			\item x\_direction 
+			\item y\_direction
+		\end{itemize}
+		
+		A \textit{Vector} can do
+		\begin{itemize}
+			\item get\_magnitude
+		\end{itemize}
+	\end{minipage}
+		%
+	\begin{minipage}{.4\textwidth}
+		This class ``looks'' like 
+				
+		\vspace*{1em}
+		\begin{tabular}{|l|}
+			\hline Vector\\ \hline
+			x\_direction\\ y\_direction\\ \hline
+			get\_magnitude\\  \hline
+		\end{tabular}
+	\end{minipage}
+
+	\vspace*{2ex}
+	Create a constructor method that initializes all instance variables.\\
+	You should write getters and setters for each of the instance variables.\\
+	Instantiate an instance of the class. You may pass any initial values of your choosing.
+	
+	Hint: magnitude is calculated as $\sqrt{x^2 + y^2}$.
+
+		\textbf{Debug this Solution:}\\
+		\mbox{ \hspace*{0.25in}	\lstinputlisting[language=Python]{./code/debugger_p12_Vector.py}}
+
+%Error 1: def __init__(x_direction, y_direction): should be def __init__(self, x_direction, y_direction):
+%Error 2: return self.y_direction should be return self.x_direction
+%Error 3: sqrt should be math.sqrt and import math OR from math import sqrt
+\pagebreak
+
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 5
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	\item Create a \textit{ColorRGB} class.
+	
+	\begin{minipage}{.6\textwidth}		
+		A \textit{ColorRGB} has
+		\begin{itemize}
+			\item red 
+			\item green
+			\item blue
+		\end{itemize}
+
+		A \textit{ColorRGB} can do
+		\begin{itemize}
+			\item to\_grayscale
+		\end{itemize}
+	\end{minipage}
+		%
+	\begin{minipage}{.4\textwidth}
+		This class ``looks'' like 
+				
+		\vspace*{1em}
+		\begin{tabular}{|l|}
+			\hline ColorRGB\\ \hline
+			red\\ green\\ blue\\ \hline
+			to\_grayscale\\  \hline
+		\end{tabular}
+	\end{minipage}
+
+	\vspace*{2ex}
+	Create a constructor method that initializes all instance variables.\\
+	You should write getters and setters for each of the instance variables.\\
+	Instantiate an instance of the class. You may pass any initial values of your choosing.
+
+	The to\_grayscale() method should return the grayscale value calculated as: 
+		$$0.3 * \text{red} + 0.59 * \text{green} + 0.11 * \text{blue}$$
+	That is, it will just return a number (a float).
+
+		\textbf{Debug this Solution:}\\
+		\mbox{ \hspace*{0.25in}	\lstinputlisting[language=Python]{./code/debugger_p5_Colors.py}}
+
+%Error 1: def __init__(red, green, blue): should be def __init__(self, red, green, blue):
+%Error 2: green = self.green should be self.green = green
+%Error 3: return 0.5 * self.red + 0.59 * self.green + 0.11 * self.blue should be return 0.3 * self.red + 0.59 * self.green + 0.11 * self.blue
+\pagebreak

@@ -1,0 +1,125 @@
+%standard 15.3
+
+
+%start_of_questions
+
+
+
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 8
+	% Difficulty: 3
+%%%%%%%%%%%%%%%%%%%%%
+%new_question
+	\item 
+		You are building a color picker feature for a drawing app.  
+		The user selects a color by entering its position in a preset list of colors.\\
+
+		A list contains some colors, shown below:
+		\begin{itemize}
+			\item \texttt{[\csq{red}, \csq{green}, \csq{blue}, \csq{yellow}, \csq{purple}]}
+		\end{itemize}
+		Write a \textbf{program} that asks the user to enter an \textbf{index} and then prints the 
+		corresponding color. If the user enters an invalid index or input, they should be asked to 
+		try again until a valid index is given.
+
+		The program should handle the following errors:
+		\begin{itemize}
+			\item If the input is not a number (\textbf{ValueError}), 
+				print \csq{Invalid input. Try again.}
+			\item If the index is out of range (\textbf{IndexError}), 
+				print \csq{Index out of range. Try again.}
+		\end{itemize}
+
+		\textbf{Examples:}
+		\begin{itemize}
+			\item \csq{Enter an index:} 2 $\rightarrow$ \csq{blue}
+			\item \csq{Enter an index:} 10 $\rightarrow$ \csq{Index out of range. Try again.}
+			\item \csq{Enter an index:} \csq{green} $\rightarrow$ \csq{Invalid input. Try again.}
+			\item (after retry) \csq{Enter an index:} 1 $\rightarrow$ \csq{green}
+		\end{itemize}
+
+%Errors: IndexError, ValueError
+
+
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 9
+	% Difficulty: 3
+%%%%%%%%%%%%%%%%%%%%%
+%new_question
+	\item 
+		You've been asked to help build part of a travel booking system.  
+		One of the features lets users type in a country code (like \csq{US}) and shows them the 
+		full country name to confirm their destination.
+
+		A dictionary stores some country codes, shown below: 
+			$$\texttt{\{\csq{US}:\csq{United States}, \csq{FR}:\csq{France}, 
+				\csq{JP}:\csq{Japan}, \csq{BR}:\csq{Brazil}\}}$$
+		Write a \textbf{program} that asks the user to enter a country code (like \csq{US}) 
+		and then prints the full country name. If the user enters an invalid code, they should 
+		be asked to try again until a valid code is entered.
+
+		The program should handle the following errors:
+		\begin{itemize}
+			%\item If the input is empty, print \csq{Invalid input. Try again.}
+			\item If the code is not found in the dictionary (\textbf{KeyError}), 
+				print \csq{Code not found. Try again.}
+		\end{itemize}
+
+		\textbf{Examples:}
+		\begin{itemize}
+			\item \csq{Enter a country code:} \csq{JP} $\rightarrow$ \csq{Japan}
+			\item \csq{Enter a country code:} \csq{XYZ} $\rightarrow$ 
+				\csq{Code not found. Try again.}
+			%\item \csq{Enter a country code:} \csq{} $\rightarrow$ \csq{Invalid input. Try again.}
+			\item (after retry) \csq{Enter a country code:} \csq{BR} $\rightarrow$ \csq{Brazil}
+		\end{itemize}
+
+%Errors: KeyError, ValueError
+
+
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 10
+	% Difficulty: 3
+%%%%%%%%%%%%%%%%%%%%%
+%new_question
+	\item 
+		A game show awards a cash prize to be split evenly among a group of winners.  
+		Write a \textbf{program} that asks the user to:
+		\begin{enumerate}
+			\item Enter the prize amount in dollars
+			\item Enter the number of winners
+		\end{enumerate}
+
+		The program should calculate how much each person gets by dividing the prize by the 
+		number of winners.
+		The program should keep asking until the input is valid, and handle the following errors:
+		\begin{itemize}
+			\item If the input is not a number (e.g. typing \csq{five}) (\textbf{ValueError}), 
+				print \csq{Invalid input. Try again.}
+			\item If there are no winners (\textbf{ZeroDivisionError}), 
+				print \csq{Must have at least one winner. Try again.}
+			%\item If the prize is so large that it causes an error, print \csq{Prize amount 
+			%too large. Try a smaller amount.}
+		\end{itemize}
+
+		\textbf{Examples:}
+		\begin{itemize}
+			\item \csq{Enter prize amount:} 10000 \\
+			      \csq{Enter number of winners:} 4 $\rightarrow$ 2500.0
+			\item \csq{Enter number of winners:} 0 $\rightarrow$ 
+				\csq{Cannot divide by zero. Try again.}
+			\item \csq{Enter prize amount:} \csq{grand} $\rightarrow$ 
+				\csq{Invalid input. Try again.}
+			%\item \csq{Enter prize amount:} 100000000000000000000000 \\ \csq{Enter number of 
+			%winners:} 1 $\rightarrow$ \csq{Prize amount too large. Try a smaller amount.}
+		\end{itemize}
+
+%Errors: ValueError, ZeroDivisionError, OverflowError
+
+
+
+
+
+%end_of_questions
+%make sure to leave at least one blank line below
+

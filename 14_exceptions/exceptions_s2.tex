@@ -1,0 +1,126 @@
+%standard 15.2 
+
+%start_of_questions
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 5
+	% Difficulty: 2
+%%%%%%%%%%%%%%%%%%%%%
+%new_question
+	\item 
+		You are helping a teacher update students' scores after a quiz.  
+		The teacher wants to add points for extra credit and needs your program to 
+		do the math safely.\\
+
+		A dictionary stores the number of points each student has earned, shown below: 
+		\begin{itemize}
+			\item \texttt{\{\csq{Alice}: 90, \csq{Bob}: 75, \csq{Charlie}: 60\}}
+		\end{itemize}
+		Write a \textbf{program} that asks the user to enter a student's name and a number 
+		to add to their score. The program should print the new number of points.
+
+		The program should handle the following errors:
+		\begin{itemize}
+			\item If the name is not found in the dictionary (\textbf{KeyError}), 
+				print \csq{Student not found.}
+			\item If the number entered is not valid (e.g., not a number) (\textbf{ValueError}), 
+				print \csq{Invalid number.}
+		\end{itemize}
+
+		\textbf{Examples:}
+		\begin{itemize}
+			\item \csq{Enter student name:} \csq{Bob} \\
+			      \csq{Enter number to add:} 10 $\rightarrow$ 85
+			\item \csq{Enter student name:} \csq{David} $\rightarrow$ \csq{Student not found.}
+			\item \csq{Enter student name:} \csq{Alice} \\
+			      \csq{Enter number to add:} \csq{ten} $\rightarrow$ \csq{Invalid number.}
+		\end{itemize}
+
+%Errors: KeyError, ValueError
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 6
+	% Difficulty: 2
+%%%%%%%%%%%%%%%%%%%%%
+%new_question
+	\item 
+		You're building a simple scheduling tool that lets users select a day of the week by 
+		entering a number between 0 and 6.  
+		Each number corresponds to a day, starting with 0 for Monday and ending with 6 for Sunday.\\
+
+		A list contains the days of the week, shown below: 
+		\begin{itemize}
+			\item \texttt{[\csq{Monday}, \csq{Tuesday}, \csq{Wednesday}, \csq{Thursday}, 
+				\csq{Friday}, \csq{Saturday}, \csq{Sunday}]}.  
+		\end{itemize}
+		Write a \textbf{program} that asks the user to enter a number (0--6) and prints the 
+		corresponding day.
+
+		The program should handle the following errors:
+		\begin{itemize}
+			\item If the input is not a valid number (\textbf{ValueError}), 
+				print \csq{Invalid input.}
+			\item If the number is outside the valid range (\textbf{IndexError}), 
+				print \csq{Index out of range.}
+		\end{itemize}
+
+		\textbf{Examples:}
+		\begin{itemize}
+			\item \csq{Enter a number:} 0 $\rightarrow$ \csq{Monday}
+			\item \csq{Enter a number:} 6 $\rightarrow$ \csq{Sunday}
+			\item \csq{Enter a number:} 7 $\rightarrow$ \csq{Index out of range.}
+			\item \csq{Enter a number:} \csq{two} $\rightarrow$ \csq{Invalid input.}
+		\end{itemize}
+
+%Errors: IndexError, ValueError
+
+
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 7
+	% Difficulty: 2
+%%%%%%%%%%%%%%%%%%%%%
+%new_question
+	\item 
+		You're building a tool that compares two numbers by calculating both the difference 
+		and the ratio. The program should ask the user to enter two numbers and then:
+		\begin{itemize}
+			\item Print the difference (first minus second)
+			\item Print the result of dividing the first number by the second
+		\end{itemize}
+
+		Write a \textbf{program} that uses \texttt{int()} to convert user input and 
+		performs both calculations.  
+
+		The program should handle the following errors:
+		\begin{itemize}
+			\item If either input is not a valid number (\textbf{ValueError}), 
+				print \csq{Invalid input.}
+			\item If the second number is 0 (\textbf{ZeroDivisionError}), 
+				print \csq{Cannot divide by zero.}
+			\item If the result is too large (\textbf{OverflowError}), 
+				print \csq{Result too large.}
+		\end{itemize}
+
+		\textbf{Examples:}
+		\begin{itemize}
+			\item \csq{Enter first number:} 100 \\
+			      \csq{Enter second number:} 20 $\rightarrow$ \csq{Difference: 80, Ratio: 5.0}
+			\item \csq{Enter first number:} 42 \\
+			      \csq{Enter second number:} 0 $\rightarrow$ \csq{Cannot divide by zero.}
+			\item \csq{Enter first number:} \csq{ten} $\rightarrow$ \csq{Invalid input.}
+			\item \csq{Enter first number:} 999999999999999999999999 \\
+			      \csq{Enter second number:} 1 $\rightarrow$ \csq{Result too large.}
+		\end{itemize}
+
+%Errors: ValueError, ZeroDivisionError, OverflowError
+
+
+%end_of_questions
+%make sure to leave at least one blank line below
+

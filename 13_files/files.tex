@@ -1,0 +1,126 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amsfonts} % For math fonts.
+\usepackage{amssymb} % For other math symbols not covered by amsmath.
+\usepackage[pdftex]{graphicx} % For pictures, use %\includegraphics[scale=decimal]{pic.png}; must be a .png file type.
+\usepackage{multicol}
+\usepackage{textcomp}
+\usepackage[colorlinks = true, urlcolor = blue]{hyperref}
+\usepackage{enumitem}
+\usepackage{graphbox} 
+\usepackage{subfig}
+\usepackage{multicol}
+\usepackage{wrapfig}
+
+
+\newcommand{\tab}{\hspace*{0.25in}}
+
+\usepackage{tikz}
+\usetikzlibrary{positioning, calc}
+\usetikzlibrary{shapes.geometric,angles,quotes}
+\usepackage{tikz-3dplot}
+
+\newcommand{\csq}[1]{\reflectbox{''}#1''}  %This produces CS style quotes.
+
+
+
+\usepackage{fullpage}
+\usepackage{listings}
+\lstset
+{ %Formatting for code in appendix
+    language=Python,
+    basicstyle=\footnotesize,
+    numbers=left,
+    stepnumber=1,
+    showstringspaces=false,
+    tabsize=2,
+    breaklines=true,
+    breakatwhitespace=false,
+}
+
+
+\begin{document}
+
+
+\begin{flushright}
+Intro functions\end{flushright}
+
+\vspace*{-1.5em}
+\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
+
+
+\vspace*{2em}
+
+\begin{enumerate}
+
+\input{files_s1}
+\input{files_s2}
+\input{files_s3}
+
+\end{enumerate}
+\end{document}
+
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 5
+%%%%%%%%%%%%%%%%%%%%%
+	\item
+		A local business is trying to count the total number of customer they had last year.  
+		They have a text file named \textit{CustomerData.txt} that has a date and the number of customers on that date.    
+		There is one entry for every day this year.  A potion of that file is displayed below.  
+		Write a program that calculates and then prints the total number of customers the business had last year.\\ 
+		\begin{flushright}
+			\fbox{\includegraphics[scale=1.5]{imgs/ScienceFairVisitorsData.PNG}}
+		\end{flushright}
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 5
+%%%%%%%%%%%%%%%%%%%%%
+	%paper-based
+	\item
+		Write a program that will open a file name "thisFile.txt" and write every other line into the file "thatFile.txt".\\ 
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 5
+%%%%%%%%%%%%%%%%%%%%%
+	%paper-based
+	\item
+		Write a program that reads and prints each line of a file named "TheFile.txt".\\ 
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 5
+%%%%%%%%%%%%%%%%%%%%%
+	%paper-based
+	\item
+		Write a program that writes each letter of your first name to a file named "NameFile.txt". Each letter should be on a new line.
+		Use your actual first name.\\ 
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 5
+%%%%%%%%%%%%%%%%%%%%%
+	%paper-based
+	\item
+		This question has two parts. You will create a file in part (a), and then use the created file in part (b). The two parts
+		are meant to be independent. If you don't know how to create the file in part (a), you may assume its been created
+		correctly for part (b).\\
+		\begin{enumerate}
+			\item
+				Create a file named $numbers.txt$ and write to it 100 randomly created integers between 250 and 500
+				(inclusively). Each number should be written on a new line.\\
+				Hint: Don't forget to import random.
+			
+			\item
+				Cycle through each number in your newly created file, and print the word $even$ if it is even. Print the word $odd$
+				if it is odd.
+
+		 
+
+
+

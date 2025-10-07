@@ -1,0 +1,156 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amsfonts} % For math fonts.
+\usepackage{amssymb} % For other math symbols not covered by amsmath.
+\usepackage[pdftex]{graphicx} % For pictures, use %\includegraphics[scale=decimal]{pic.png}; must be a .png file type.
+\usepackage{multicol}
+\usepackage{textcomp}
+\usepackage[colorlinks = true, urlcolor = blue]{hyperref}
+\usepackage{enumitem}
+\usepackage{graphbox} 
+\usepackage{subfig}
+\usepackage{multicol}
+
+\newcommand{\tab}{\hspace*{0.25in}}
+
+\usepackage{tikz}
+\usetikzlibrary{positioning, calc}
+\usetikzlibrary{shapes.geometric,angles,quotes}
+\usepackage{tikz-3dplot}
+
+\newcommand{\csq}[1]{\reflectbox{''}#1''}  %This produces CS style quotes.
+
+
+
+\usepackage{fullpage}
+\usepackage{listings}
+\lstset
+{ %Formatting for code in appendix
+    language=Python,
+    basicstyle=\footnotesize,
+    numbers=left,
+    stepnumber=1,
+    showstringspaces=false,
+    tabsize=2,
+    breaklines=true,
+    breakatwhitespace=false,
+}
+
+
+\begin{document}
+
+
+\begin{flushright}
+Intro Classes\end{flushright}
+
+\vspace*{-1.5em}
+\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
+
+
+\vspace*{2em}
+
+\begin{enumerate}
+
+
+\input{classes1_s1}
+\input{classes1_s2}
+\input{classes1_s3}
+
+
+
+\end{enumerate}
+\end{document}
+
+
+
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 15
+	% Difficulty: 1
+	% Standard: CL.1
+%%%%%%%%%%%%%%%%%%%%%
+	\begin{minipage}{.6\textwidth}
+		\item Create a \textit{Recipe} class.\\
+		A \textit{Recipe} has
+		\begin{itemize}
+			\item name 
+			\item cooking\_time
+			%\item calores\_per\_serving
+		\end{itemize}
+
+		A \textit{Recipe} can do
+		\begin{itemize}
+			\item is\_quick\_meal
+			%\item calculate\_calories\_total(servings)
+		\end{itemize}
+	\end{minipage}
+		%
+	\begin{minipage}{.4\textwidth}
+		This class ``looks'' like 
+				
+		\vspace*{1em}
+		\begin{tabular}{|l|}
+			\hline Circle\\ \hline
+			name\\ cooking\_time \\  \hline
+			is\_quick\_meal\\ \hline
+		\end{tabular}
+	\end{minipage}
+
+	\vspace*{2ex}
+	Create a constructor method that initializes all instance variables.\\
+	You should write getters and setters for each of the instance variables.\\
+	Instantiate an instance of the class. You may pass any initial values of your choosing.	
+
+	The is\_quick\_meal() method should return True if the cooking\_time is less than 30 minutes and False 
+	if it takes 30 minutes or more.\\
+	%The calculate\_calories\_total(servings) method should return the total calories based on the number of servings requested.\
+	
+	%Create an \_\_str\_\_ method that returns a string in the format:\\
+	%"Recipe: [name] | Time: [cooking\_time] min | Calories: [calories\_per\_serving] per serving"\\
+	%\tab \tab eg. "Recipe: Pasta Carbonara | Time: 25 min | Calories: 380 per serving".\\
+
+
+
+
+%\item Write a program that will convert some amount of pennies into the fewest amount of dollars and coins possible.  For example, 75 pennies is 3 quarters.  86 pennies is 3 quarters, 1 dime, and 1 penny.  130 pennies is 1 dollar, 1 quarter and 1 nickel.  Let the user pick the number of pennies.  You may assume the largest input is 499 pennies.\\
+%Hint: the way to do this is to always substitute for the largest denomination if available.  For example, if there is at least 100 pennies substitute for a dollar before quarters.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 1
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+	%paper-based
+	\item Create a \textit{Movie} class.\\
+	\begin{minipage}{.6\textwidth}
+		
+		A \textit{Movie} has
+		\begin{itemize}
+			\item A Title
+			\item A Rating
+		\end{itemize}
+	\end{minipage} 
+	%
+	\begin{minipage}{.4\textwidth}
+		This class ``looks'' like 
+				
+		\vspace*{1em}
+		\begin{tabular}{|l|}
+			\hline Movie\\ \hline
+			Title\\ Rating\\ \hline
+			getRating\\ setRating\\ \_\_str\_\_\\  \hline
+		\end{tabular}
+	\end{minipage}
+
+	\vspace*{2ex}
+	The movie object should have the ability to be passed initial values.\\
+	You may pick anything you like for the string representation of the object.
+
+
+
+
+

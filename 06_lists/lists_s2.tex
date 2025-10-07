@@ -1,0 +1,213 @@
+%standard 7.2
+%week 6
+
+
+%start_of_questions
+
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 5
+	% Difficulty: 2
+%%%%%%%%%%%%%%%%%%%%%
+	\item 
+		Given a positive integer $n$, the following rules will always create a sequence that 
+		ends with 1, called Hailstone Sequence:
+		\begin{enumerate}
+			\item If $n$ is even, divide by 2
+			\item If $n$ is odd, multiply by 3 and add 1 (i.e. $3n+1$)
+			\item Continue until $n$ is 1
+		\end{enumerate}
+		Write a \textbf{function} that returns a list with the hailstone sequence starting at $n$. 
+		The argument to the function will be $n$ (the integer to start the sequence from).
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  hailstone\_seq(25) $\rightarrow$ [25, 76, 38, 19, 58 ... 8, 4, 2, 1], 
+			\item  hailstone\_seq(40) $\rightarrow$ [40, 20, 10, 5, 16, 8, 4, 2, 1]
+		\end{itemize}
+
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 6
+	% Difficulty: 2
+%%%%%%%%%%%%%%%%%%%%%
+	\item 
+		%https://edabit.com/challenge/6Pf5GGG6HnzbB95gf
+		Write a \textbf{function} that returns a list with the factors of a given integer. The argument of the function
+		will be $num$ (integer to find factors for).
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  find\_factors(12) $\rightarrow$ [1, 2, 3, 4, 6, 12], 
+			\item  find\_factors(17) $\rightarrow$ [1, 17],
+			\item  find\_factors(36) $\rightarrow$ [1, 2, 3, 4, 6, 9, 12, 18, 36]
+		\end{itemize}
+
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 7
+	% Difficulty: 2
+%%%%%%%%%%%%%%%%%%%%%
+	\item
+		Write a \textbf{function} that takes 3 numbers as arguments, $num\_1$ (first number), 
+		$num\_2$ (second number), and $num\_3$ (third number). 
+		Return a list of the integers in ascending order. 
+		You may \textbf{not} use the built-in functions \textit{max}(), \textit{min}(), 
+		\textit{sort}(), or \textit{sorted}().
+		
+	\textbf{Examples:}
+	\begin{itemize}
+		\item  ascending\_order(2, 3, 1) $\rightarrow$ [1, 2, 3], 
+		\item  ascending\_order(10, 1, 25) $\rightarrow$ [1, 10, 25], 
+		\item  ascending\_order(2, 45, 4) $\rightarrow$ [2, 4, 45] 
+	\end{itemize}
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 8
+	% Difficulty: 2
+%%%%%%%%%%%%%%%%%%%%%
+	\item
+		Write a \textbf{function} that takes 3 numbers as arguments, $num\_1$ (first number), 
+		$num\_2$ (second number), and $num\_3$ (third number). 
+		Return a list of the integers in descending order. 
+		You may \textbf{not} use the built-in functions \textit{max}(), \textit{min}(), 
+		\textit{sort}(), or \textit{sorted}().
+		
+	\textbf{Examples:}
+	\begin{itemize}
+		\item  descending\_order(2, 3, 1) $\rightarrow$ [3, 2, 1], 
+		\item  descending\_order(10, 1, 25) $\rightarrow$ [25, 10, 1], 
+		\item  descending\_order(2, 45, 4) $\rightarrow$ [45, 4, 2] 
+	\end{itemize}
+
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 11
+	% Difficulty: 2
+%%%%%%%%%%%%%%%%%%%%%
+%https://edabit.com/challenge/izfXy5SGfeekmKExH
+	\item 
+		Write a function named \textit{add\_lists} that takes two lists $lyst1$ and $lyst2$ and adds the 
+		first element in $lyst1$ with the first element in $lyst2$, the second element $lyst1$
+		with the second element $lyst2$, etc. Return a new list containing the corresponding 
+		sums of the list1 and list2.  You may assume both lists have the same length.
+		%Return True if all element combinations add up to the same number. Otherwise, return False.
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  add\_lists([1, 3, 3, 1], [4, 3, 6, 1]) $\rightarrow$ [5, 6, 8, 2] 
+				( since 1+4=5; 3+3=6; 3+6=9; 1+1=2)
+			\item  add\_lists([1, 8, 5, 0, -7], [0, -7, 4, 2, -6]) $\rightarrow$ [1, 1, 9, 2, -13]
+			\item  add\_lists([1, 2], [-1, 1]) $\rightarrow$ [0, 3]
+		\end{itemize}
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 12
+	% Difficulty: 2
+%%%%%%%%%%%%%%%%%%%%%
+%https://edabit.com/challenge/ksZrMdraPqHjvbaE6
+	\item 
+		Write a \textbf{function} that finds the largest even number in a list $numbers$. Return -1 if not found. 
+		You may \textbf{not} use the built-in functions \textit{max}(), \textit{min}(), \textit{sort}(), or \textit{sorted}().
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  largest\_even([3, 7, 2, 1, 7, 9, 10, 13]) $\rightarrow$ 10,
+			\item  largest\_even([1, 3, 5, 7]) $\rightarrow$ -1,
+			\item  largest\_even([0, 19, 18973623]) $\rightarrow$ 0
+		\end{itemize}
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 13
+	% Difficulty: 2
+%%%%%%%%%%%%%%%%%%%%%
+	\item 
+		Write a \textbf{function} that finds the largest odd number in a list $numbers$. Return -1 if not found. 
+		You may \textbf{not} use the built-in functions \textit{max}(), \textit{min}(), \textit{sort}(), or \textit{sorted}().
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  largest\_odd([3, 7, 2, 1, 7, 9, 10, 13]) $\rightarrow$ 13,
+			\item  largest\_odd([2, 4, 6, 8]) $\rightarrow$ -1,
+			\item  largest\_odd([0, 19, 18973623]) $\rightarrow$ 18973623
+		\end{itemize}
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 16
+	% Difficulty: 2
+%%%%%%%%%%%%%%%%%%%%%
+%https://edabit.com/challenge/egMp3GWyN8TPptbZA
+	\item
+		YouTube currently displays a like and a dislike button, allowing you to express your opinions about particular content. 
+		It's set up in such a way that you cannot like and dislike a video at the same time.
+		There are two other interesting rules to be noted about the interface:
+		\begin{enumerate}
+			\item Pressing a button, which is already active, will undo your press.
+			\item If you press the like button after pressing the dislike button, the like button overwrites the previous \csq{dislike} state. The same is true for the other way round.
+		\end{enumerate}
+		Write a \textbf{function} that takes in a list of button inputs $events$ and returns the final state.
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  like\_or\_dislike([\csq{dislike}]) $\rightarrow$ \csq{dislike},
+			\item  like\_or\_dislike([\csq{like}, \csq{like}]) $\rightarrow$ \csq{nothing},
+			\item  like\_or\_dislike([\csq{dislike}, \csq{like}]) $\rightarrow$ \csq{like},
+			\item  like\_or\_dislike([\csq{like}, \csq{dislike}, \csq{dislike}]) $\rightarrow$ \csq{nothing},
+		\end{itemize}
+
+
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 17
+	% Difficulty: 2
+%%%%%%%%%%%%%%%%%%%%%
+%https://edabit.com/challenge/jwzgYjymYK7Gmro93
+	\item
+		Write a \textbf{function} that takes two arguments, a list and an item.  The function should return the indices of all occurrences of the $item$ in the list.
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  get\_indices( [1, 5, 5, 2, 7], 7) $\rightarrow$ [4]
+			\item  get\_indices( [1, 5, 5, 2, 7], 5) $\rightarrow$ [1, 2]
+			\item  get\_indices( [1, 5, 5, 2, 7], 8) $\rightarrow$ []
+			\item  get\_indices( [\csq{a}, \csq{a}, \csq{b}, \csq{a}, \csq{b}, \csq{a}], \csq{a}) 
+				$\rightarrow$ [0, 1, 3, 5]
+		\end{itemize}
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 18
+	% Difficulty: 2
+%%%%%%%%%%%%%%%%%%%%%
+%https://edabit.com/challenge/BuwHwPvt92yw574zB
+	\item
+		Write a \textbf{function} that takes two numbers as arguments $num$ and $length$ and returns a 
+		list of multiples of $num$ until the list length reaches $length$.
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  list\_of\_multiples(7, 5) $\rightarrow$ [7, 14, 21, 28, 35]
+			\item  list\_of\_multiples(12, 10) $\rightarrow$ [12, 24, 36, 48, 60, 72, 84, 96, 108, 120]
+			\item  list\_of\_multiples(17, 6) $\rightarrow$ [17, 34, 51, 68, 85, 102]
+		\end{itemize}
+
+%end_of_questions
+%make sure to leave at least one blank line below
+

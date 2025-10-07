@@ -1,0 +1,248 @@
+%standard 12.2
+
+%start_of_questions
+
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 3
+	% Difficulty: 2
+%%%%%%%%%%%%%%%%%%%%%
+	\item
+	\begin{enumerate}
+		\item
+			Write a class for a Lion with the below instance variables and methods.\\ 
+			The Lion object should have the ability to be passed both initial values.\\  
+			You may pick anything you like for the string representation of the object.\\
+			A Lion says, "Roar."\\  
+			As part of your class, write a method called roar, that makes a lion roar!\\
+			Hint: for this method, you can just print the word Roar!
+			\begin{flushright}
+			\begin{tabular}{|l|}
+				\hline
+				Lion\\ \hline
+				name\\	gender\\	 \hline
+				get\_name \\ set\_name \\ roar \\ \_\_str\_\_ \\ \hline
+			\end{tabular}
+			\end{flushright}
+
+		\item
+			Write a class for a Zoo. \\
+			The class should start (instantiate) with a name, and no Lions in it. \\ 
+			Write a method to add a Lion.\\
+			Write a method that makes all of the lions in the zoo roar one time each.\\
+			Write a method called \textit{count\_lions} which reports the number of male 
+			lions and female lions at the zoo. eg. Your code could print: \textit{1 male, 4 female}.\\
+			You may pick anything you like for the string representation of the object.
+	
+			\begin{flushright}
+			\begin{tabular}{|l|}
+				\hline
+				Zoo\\ \hline  	%Class Name
+				location\\ lions\\ \hline		%Instance variables
+				add\_lion\\ lions\_roar \\ count\_lions \_\_str\_\_ \\ \hline		%methods
+			\end{tabular}
+			\end{flushright}
+
+		\item
+			Create an instance of the Zoo class and add two Lions to it.\\
+			Call the method to make all lions in your zoo roar (lions\_roar).\\
+			You can make up any names or genders for Lions and a location for a Zoo.\\
+	\end{enumerate}
+\pagebreak
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 4
+	% Difficulty: 2
+%%%%%%%%%%%%%%%%%%%%%
+	\item 
+	\begin{enumerate}
+		\item 
+			Write a class for an \textit{Employee} with the below instance variables and methods.\\
+			An \textit{Employee} should start (be initialized) with both a name and position.\\
+			You may pick anything you like for the string representation of the object.
+			\begin{flushright}
+			\begin{tabular}{|l|} \hline
+				Employee\\ \hline
+				name\\ position\\ \hline
+				get\_position\\ set\_position\\ \_\_str\_\_ \\ \hline
+			\end{tabular}
+			\end{flushright}
+		
+		\item 
+			Write a class for a \textit{Department} within a company. The \textit{Department} should 
+			start with a name and a budget, but with no employees. That is, it should not have the ability to be
+			initialized with employees in it. However, the \textit{Department} should have the ability to add 
+			employees as well as show all of the employees in the \textit{Department}.\\
+			Additionally, a department is large if it has 10 or more employees. Write a method called 
+			\textit{is\_large} which returns True is the department has 10 or more employees and False otherwise.\\
+			You may pick anything you like for the string representation of the object.
+			\begin{flushright}
+			\begin{tabular}{|l|} \hline 
+				Department\\ \hline
+				dept\_name\\ budget\\ employees\\ \hline
+				get\_budget\\ set\_budget\\ add\_employee\\ show\_staff\_list\\ 
+					\_\_str\_\_ \\ \hline
+			\end{tabular}
+			\end{flushright}
+
+		\item
+			Create an instance of the \textit{Department} class and add 2 \textit{Employee}s to it.
+	\end{enumerate}
+\pagebreak
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 6
+	% Difficulty: 2
+%%%%%%%%%%%%%%%%%%%%%
+	\item
+	\begin{enumerate}
+		\item
+			Write a class for a Post with the below instance variables and methods.\\ 
+			The Post object should have the ability to be passed both initial values.\\  
+			You may pick anything you like for the string representation of the object.\\
+			A Post can be liked with a heart.\\  
+			As part of your class, write a method called add\_like, that adds 1 like to the post.\\
+				\tab Hint: for this method, you should increase a like counter.\\
+			As part of your class, write a method called display, that prints out the post\'s caption.\\			
+			\begin{flushright}
+			\begin{tabular}{|l|}
+				\hline
+				Post\\ \hline
+				caption\\	likes\\	 \hline
+				get\_likes \\ add\_like \\ display \\ \_\_str\_\_ \\ \hline
+			\end{tabular}
+			\end{flushright}
+
+		\item
+			Write a class for a Profile. \\
+			The class should start (instantiate) with a username, and no Posts in it. \\ 
+			Write a method to add a Post to the user's Profile.\\
+			%Write a method that displays all of the posts in the profile one time each.\\
+			A post is trending is it has at least 10,000 likes.	 \\Write a method that method 
+			that displays all of a user's trending posts one time each.\\ 	
+			You may pick anything you like for the string representation of the object.
+	
+			\begin{flushright}
+			\begin{tabular}{|l|}
+				\hline
+				Profile\\ \hline  	%Class Name
+				username\\ posts\\ \hline		%Instance variables
+				add\_post\\ display\_trending\_posts \\ \_\_str\_\_ \\ \hline		%methods
+			\end{tabular}
+			\end{flushright}
+
+		\item
+			Create an instance of the Profile class and add two Posts to it.\\
+			Call the method to display all the trending posts in the profile (display\_trending\_posts).\\
+			You can make up any captions for Posts and a username for a Profile.\\
+	\end{enumerate}
+\pagebreak
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 7
+	% Difficulty: 2
+%%%%%%%%%%%%%%%%%%%%%
+	\item
+	\begin{enumerate}
+		\item
+			Write a class for a Product with the below instance variables and methods.\\ 
+			The Product object should have the ability to be passed both initial values.\\  
+			You may pick anything you like for the string representation of the object.\\
+			A Product has a price and can be added to a cart.\\  
+			As part of your class, write a method called display\_details, that displays the product information.\\
+			Hint: for this method, you should print the name and price of the product.
+			\begin{flushright}
+			\begin{tabular}{|l|}
+				\hline
+				Product\\ \hline
+				name\\	price\\	 \hline
+				get\_price \\ set\_price \\ display\_details \\ \_\_str\_\_ \\ \hline
+			\end{tabular}
+			\end{flushright}
+
+		\item
+			Write a class for a ShoppingCart. \\
+			The class should start (instantiate) with a customer\_id, and no Products in it. \\ 
+			Write a method to add a Product.\\
+			Write a method that calculates the total price of all products in the cart.\\
+			You may pick anything you like for the string representation of the object.
+	
+			\begin{flushright}
+			\begin{tabular}{|l|}
+				\hline
+				ShoppingCart\\ \hline  	%Class Name
+				customer\_id \\ products\\ \hline		%Instance variables
+				add\_product \\ calculate\_total \\ \_\_str\_\_ \\ \hline		%methods
+			\end{tabular}
+			\end{flushright}
+
+		\item
+			Create an instance of the ShoppingCart class and add two Products to it.\\
+			Call the method to calculate the total price of all products in your cart (calculate\_total).\\
+			You can make up any names and prices for Products and a customer\_id for a ShoppingCart.\\
+	\end{enumerate}
+\pagebreak
+
+
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 9
+	% Difficulty: 2
+%%%%%%%%%%%%%%%%%%%%%
+	\item
+	\begin{enumerate}
+		\item
+			Write a class for a MenuItem with the below instance variables and methods.\\ 
+			The MenuItem object should have the ability to be passed both initial values.\\  
+			You may pick anything you like for the string representation of the object.\\
+			A MenuItem has a price and can be added to an order.\\  
+			As part of your class, write a method called show\_description, that displays the menu item information.
+			Hint: for this method, you should print the name and price of the menu item.
+			\begin{flushright}
+			\begin{tabular}{|l|}
+				\hline
+				MenuItem\\ \hline
+				name\\	price\\	 \hline
+				get\_price \\ set\_price \\ show\_description \\ \_\_str\_\_ \\ \hline
+			\end{tabular}
+			\end{flushright}
+
+		\item
+			Write a class for a Restaurant. \\
+			The class should start (instantiate) with a restaurant\_name, and no MenuItems in it. \\ 
+			Write a method to add a MenuItem to the restaurant.\\
+			Write a method that displays all menu items with their prices.\\
+			The lunch menu has all the same MenuItems as the regular menu; however, all MenuItems are \$2 cheaper.
+			Write a method called lunch\_menu which displays all MenuItems, but with the prices reduced by \$2. \\	
+			You may pick anything you like for the string representation of the object.
+	
+			\begin{flushright}
+			\begin{tabular}{|l|}
+				\hline
+				Restaurant\\ \hline  	%Class Name
+				restaurant\_name \\ menu\_items\\ \hline		%Instance variables
+				add\_menu\_item \\ display\_menu \\ \_\_str\_\_ \\ \hline		%methods
+			\end{tabular}
+			\end{flushright}
+
+		\item
+			Create an instance of the Restaurant class and add two MenuItems to it.\\
+			Call the method to display all menu items (display\_menu).\\
+			You can make up any names and prices for MenuItems and a restaurant\_name for a Restaurant.\\
+	\end{enumerate}
+\pagebreak
+
+%end_of_questions
+%make sure to leave at least one blank line below
+
+
+

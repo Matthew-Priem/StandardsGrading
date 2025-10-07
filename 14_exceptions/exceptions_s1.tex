@@ -1,0 +1,133 @@
+%standard 15.1
+
+
+%This problem should NOT be selected is this appears verbadim in lecture.
+%This is meant only for practice...
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 1
+	% Difficulty: 0 
+%%%%%%%%%%%%%%%%%%%%%
+%new_question
+	\item 
+		You're building a simple calculator tool that helps users perform safe division.  
+		It should take a number from the user and divide 10 by that number, handling common 
+		input errors gracefully. 
+
+		Write a \textbf{program} that asks the user to enter a number and then prints the 
+		result of dividing 10 by that number.  Force the user to enter valid input by 
+		putting the error handling within a loop, and only exit the loop no error was found.
+		The program should handle two types of errors:
+		\begin{itemize}
+			\item If there is a \textbf{ValueError}, print \csq{Please enter a valid number.}
+			\item If there is a \textbf{ZeroDivisionError}, print \csq{Cannot divide by zero.}
+		\end{itemize}
+
+		\textbf{Examples:}
+		\begin{itemize}
+			\item \csq{Enter a number:} 5 $\rightarrow$ 2.0
+			\item \csq{Enter a number:} 0 $\rightarrow$ \csq{Cannot divide by zero.}
+			\item \csq{Enter a number:} \csq{hello} $\rightarrow$ \csq{Please enter a valid number.}
+		\end{itemize}
+
+%Errors: ValueError, ZeroDivisionError
+
+
+
+
+
+%start_of_questions
+
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 2 
+	% Difficulty: 1 
+%%%%%%%%%%%%%%%%%%%%%	
+	\item 
+		You're building a simple menu selector for a fruit delivery service.  
+		Customers can choose a fruit by entering its index from a list of available options.
+
+		Write a program that asks the user to enter an index and then prints the 
+		corresponding item from a predefined list, shown below:
+		\begin{itemize}
+			\item \texttt{[\csq{apple}, \csq{banana}, \csq{cherry}, \csq{date}]}
+		\end{itemize}
+		The program should handle two types of errors:
+		\begin{itemize}
+			\item If the input is not a valid number (\textbf{ValueError}), 
+				print \csq{Invalid index format.}
+			\item If the number is out of range (\textbf{IndexError}), 
+				print \csq{Index out of range.}
+		\end{itemize}
+
+		\textbf{Examples:}
+		\begin{itemize}
+			\item \csq{Enter an index:} 1 $\rightarrow$ \csq{banana}
+			\item \csq{Enter an index:} 5 $\rightarrow$ \csq{Index out of range.}
+			\item \csq{Enter an index:} \csq{two} $\rightarrow$ \csq{Invalid index format.}
+		\end{itemize}
+
+%Errors: IndexError, ValueError
+
+
+
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 3
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+%new_question
+	\item 
+		You're building a shopping assistant that helps users look up the prices of products 
+		from a catalog.
+
+		Write a \textbf{program} that asks the user to enter the name of a product and then prints 
+		its price from a predefined dictionary, shown below:
+		\begin{itemize}
+			\item \texttt{\{\csq{apple}: 1.5, \csq{banana}: 0.9, \csq{cherry}: 2.2\}}
+		\end{itemize}
+		The program should handle two types of issues:
+		\begin{itemize}
+			\item If the product is not found in the dictionary \textbf{KeyError}, 
+				print \csq{Product not found.}
+			\item If the input is empty, print \csq{Please enter a product name.}\\
+				Hint: this will not produce an error. Handle it with logic.	
+		\end{itemize}
+
+		\textbf{Examples:}
+		\begin{itemize}
+			\item \csq{Enter product name:} \csq{apple} $\rightarrow$ 1.5
+			\item \csq{Enter product name:} \csq{mango} $\rightarrow$ \csq{Product not found.}
+			\item \csq{Enter product name:} \csq{} $\rightarrow$ \csq{Please enter a product name.}
+		\end{itemize}
+
+%Errors: ValueError, KeyError
+
+
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 4
+	% Difficulty: 1
+%%%%%%%%%%%%%%%%%%%%%
+%new_question
+	\item 
+		Write a \textbf{program} that asks the user to enter the name of a text file and then prints 
+		the contents of that file to the screen. The program should handle the following error:
+		\begin{itemize}
+			\item If the file does not exist (\textbf{FileExistsError}), print \csq{File not found.}
+		\end{itemize}
+
+		\textbf{Examples:}\\
+			\begin{center}
+			\includegraphics[scale=.65]{imgs/FileDirectoryExample.PNG}
+			\end{center}
+		\begin{itemize}
+			\item \csq{Enter file name:} \csq{LunchData.txt} $\rightarrow$ 
+				(prints the content of LunchData.txt)
+			\item \csq{Enter file name:} \csq{DinnerData.txt} $\rightarrow$ \csq{File not found.}
+		\end{itemize}
+%Errors: FileNotFoundError
+
+
+%end_of_questions
+%make sure to leave at least one blank line below
+

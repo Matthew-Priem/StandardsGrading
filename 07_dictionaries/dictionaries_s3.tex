@@ -1,0 +1,65 @@
+%standard 8.3
+%week 7
+
+
+%start_of_questions
+
+
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 4
+	% Difficulty: 3
+%%%%%%%%%%%%%%%%%%%%%
+	\item 	
+		Write a \textbf{function} that takes a dictionary called $names$ of tech ids and student names as key-value pairs, and returns a list containing just the student names. 
+
+		\textbf{Examples:}		
+		\begin{itemize}
+			\item  get\_names(\{\csq{01475}: \csq{Steve}, \csq{87469}: \csq{Alice},
+				 \csq{654123}: \csq{Bob} \}) $\rightarrow$ [\csq{Steve}, \csq{Alice}, \csq{Bob}]
+			\item  get\_names(\{ \csq{ID1}: \csq{John}, \csq{ID2}: \csq{Emma}, 
+				\csq{ID3}: \csq{Liam} \}) $\rightarrow$ [\csq{John}, \csq{Emma}, \csq{Liam}]
+			\item  get\_names(\{\}) $\rightarrow$ []
+		\end{itemize}
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 12
+	% Difficulty: 3
+%%%%%%%%%%%%%%%%%%%%%
+\item
+	Write a \textbf{function} that takes a dictionary, called $store$, representing items and their prices, and an integer, called $wallet$, 
+	representing the amount of money you have. The function should return a list of items you can afford.
+	If you cannot afford anything, return an empty list.
+
+	\textbf{Examples:}  
+	\begin{itemize}  
+		\item items\_purchase(\{\csq{Water}: 1, \csq{Bread}: 3, \csq{TV}: 1000\}, 300) $\rightarrow$ [\csq{Bread}, \csq{Water}]
+		\item items\_purchase(\{\csq{Apple}: 4, \csq{Pan}: 100, \csq{Spoon}: 2 \}, 100) $\rightarrow$ [\csq{Apple}, \csq{Pan}, \csq{Spoon}]
+		\item items\_purchase(\{\csq{Phone}: 999, \csq{Laptop}: 5000, \csq{PC}: 1200 \}, 1) $\rightarrow$ []
+	\end{itemize}  
+
+
+%new_question
+%%%%%%%%%%%%%%%%%%%%%
+	% Problem 14
+	% Difficulty: 3
+%%%%%%%%%%%%%%%%%%%%%
+\item
+	Write a \textbf{function} that takes a dictionary, called $employee\_salaries$, where the keys are employee names and the values are their salaries. 
+	The function should return a list of employees earning above a given salary.
+	
+	\textbf{Examples:}  
+	\begin{itemize}  
+		\item high\_earners(\{\csq{Alice}: 50000, \csq{Bob}: 75000, \csq{Charlie}: 100000\}, 60000) $\rightarrow$ [\csq{Bob}, \csq{Charlie}]
+		\item high\_earners(\{\csq{David}: 30000, \csq{Emma}: 45000, \csq{Frank}: 50000\}, 40000) $\rightarrow$ [\csq{Emma}, \csq{Frank}]
+		\item high\_earners(\{\csq{George}: 25000, \csq{Hannah}: 27000, \csq{Ian}: 29000\}, 30000) $\rightarrow$ []
+	\end{itemize}
+
+
+%end_of_questions
+%make sure to leave at least one blank line below
+
