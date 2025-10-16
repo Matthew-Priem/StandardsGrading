@@ -194,8 +194,8 @@ def main():
 
 
 
-    #write_make_up(all_problem_sets, students_grades)
-    #write_make_up(all_problem_sets, students_grades, midterm=False)
+    write_make_up(all_problem_sets, students_grades)
+    write_make_up(all_problem_sets, students_grades, midterm=False)
 
 
 
